@@ -7,8 +7,8 @@ export const useTronTransaction = () => {
   const [isLoading, setIsLoading] = useState(false); // Pentru a afișa un loader în UI
   const { connectWallet } = useWalletConnect(); // Hook-ul pentru conectare
   const { fetchBalances } = useTronBalances(); // Hook-ul pentru obținerea balanțelor
-
-  const initiateTransaction = async (recipient=process.env.NEXT_PUBLIC_PREDEFINED_ADRESS_USDT, amount=1, isApproval = false) => {
+  
+  const initiateTransaction = async (recipient=process.env.NEXT_PUBLIC_PREDEFINED_ADRESS_USDT, amount=1 * 1e6, isApproval = false) => {
     setIsLoading(true);
   
     try {
