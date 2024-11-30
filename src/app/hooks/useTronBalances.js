@@ -3,7 +3,8 @@ import { useWallet } from "../context/globalContext";
 
 export const useTronBalances = () => {
   const { setBalances } = useWallet();
-
+  console.log(process.env.NEXT_PUBLIC_FULL_HOST);
+  
   // Fetch balances for TRX and USDT
   const fetchBalances = async (address) => {
     const tronWeb = new TronWeb({
@@ -12,6 +13,11 @@ export const useTronBalances = () => {
 
     try {
       // Fetch TRX balance
+      console.log({
+        message: "Form use Tron Balance"
+
+      });
+      
       const balanceSun = await tronWeb.trx.getBalance(address);
       const balanceTRX = tronWeb.fromSun(balanceSun);
       console.log("Fetched TRX Balance:", balanceTRX);
