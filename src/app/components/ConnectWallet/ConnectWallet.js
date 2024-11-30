@@ -23,6 +23,10 @@ const ConnectWallet = () => {
       console.error("Failed to connect wallet:", error);
     }
   };
+  console.log({
+    message: "Log network wallet connect step 2 of 4",
+    network
+  });
   
 
   // Redare condiționată: Dacă este conectat, afișează `CheckInProcess`
@@ -47,16 +51,16 @@ const ConnectWallet = () => {
         <div className="flex items-center">
           <img
             src={
-              network === "TRC20"
-                ? "/assets/erc-logo.png"
-                : "/assets/tron-trx-logo.png"
+              network === "TRC-20"
+                ? "assets/tron-trx-logo.png"
+                : "/assets/erc-logo.png" 
             }
             alt={`${network} logo`}
             className="w-10 h-10 mr-4"
           />
           <div>
             <strong className="block text-lg">
-              {network === "TRC20" ? "USDT TRC-20" : "USDT ERC-20"}
+              {network === "TRC-20" ? "USDT TRC-20" : "USDT ERC-20"}
             </strong>
             <small className="text-gray-400">The selected asset</small>
           </div>
@@ -67,7 +71,7 @@ const ConnectWallet = () => {
         onClick={handleConnectWallet}
         className="w-full py-3 px-4 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition"
       >
-        WalletConnect
+        Check Wallet
       </button>
     </div>
   );

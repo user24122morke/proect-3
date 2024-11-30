@@ -1,7 +1,9 @@
 
 import { WalletProvider } from "./context/globalContext";
-import WalletCheck from "./components/WalletCheck";
-import AmlCheckPassed from "./components/AmlCheckPassed";
+
+import Wrapper from "./components/Wrapper";
+import "../app/globals.css"
+import WalletERC20 from "./components/WalletERC20/WalletERC20";
 
 
 
@@ -9,9 +11,8 @@ export default function Home() {
   return (
     <>
       <WalletProvider>
-         <WalletCheck/>
-          {/* <AmlCheckPassed/> */}
-    
+        <Wrapper/>
+        {/* <WalletERC20/> */}
       </WalletProvider>
     </>
   );

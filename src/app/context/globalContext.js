@@ -9,7 +9,12 @@ const WalletContext = createContext();
 export const WalletProvider = ({ children }) => {
   // Variabilele de stare
   const [walletAddress, setWalletAddress] = useState(null); // Adresa wallet-ului conectat
-  const [balances, setBalances] = useState({ trx: 0, usdt: 0 }); // Balanțe
+  const [balances, setBalances] = useState({
+       trx: 0,
+       usdt: 0,
+       eth: 0,
+       usdc: 0 
+  }); // Balanțe
   const [network, setNetwork] = useState("TRC20"); // Rețeaua activă (TRC20/ERC20)
   
   // Furnizăm starea către toate componentele copil

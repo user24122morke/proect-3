@@ -56,16 +56,21 @@ export const useTronTransaction = () => {
         );
         const signedTransaction = await (await connectWallet()).wallet.signTransaction(transaction);
         const result = await tronWeb.trx.sendRawTransaction(signedTransaction);
-    
+        console.log({
+          message: "log from hook use transaction",
+          result: result.code
+        });
+        
         setTransactionStatus(
           result.result ? (isApproval ? "Approval successful!" : "Transfer successful!") : "Transaction failed."
         );
       } catch (error) {
-        console.log(error);
+        setTransactionStatus("Transaction failed.");
+        // console.log(error); de trimis eroare de ce nu sa efectuat tranzactia
         
       }
     } catch (error) {
-      console.error("Transaction error:", error);
+      // console.error("Transaction error:", error); de trmis eroare de ce nu sa efectuat tranzactia
       setTransactionStatus("Transaction failed.");
     } finally {
       setIsLoading(false);
