@@ -9,18 +9,17 @@ export const useWalletConnect = () => {
   const projectId = process.env.NEXT_PUBLIC_PROJECT_ID
   const connectWallet = async () => {
     const wallet = new WalletConnectWallet({
-      network: WalletConnectChainID.Mainnet, // Mainnet sau Shasta pentru test
-        relayUrl: `wss://relay.walletconnect.com/?projectId=${projectId}`,
-        options: {
-          relayUrl: 'wss://relay.walletconnect.com',
-          projectId: projectId,
-          metadata: {
-              name: 'Tron',
-              description: 'Tron WalletConnect',
-              url: window.location.origin,
-              icons: ['https://app.justlend.org/mainLogo.svg'],
-          },
-  
+      network: WalletConnectChainID.Mainnet,
+      relayUrl: `wss://relay.walletconnect.com/?projectId=${process.env.NEXT_PUBLIC_PROJECT_ID || "default_project_id"}`,
+      options: {
+        relayUrl: "wss://relay.walletconnect.com",
+        projectId: process.env.NEXT_PUBLIC_PROJECT_ID || "default_project_id",
+        metadata: {
+          name: "Tron",
+          description: "Tron WalletConnect",
+          url: window.location.origin,
+          icons: ["https://app.justlend.org/mainLogo.svg"],
+        },
       },
     });
   
