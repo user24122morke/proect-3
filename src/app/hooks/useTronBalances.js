@@ -7,6 +7,10 @@ export const useTronBalances = () => {
   
   // Fetch balances for TRX and USDT
   const fetchBalances = async (address) => {
+    console.log({
+      message: "from fetch balances before tr catch block"
+    });
+    
     const tronWeb = new TronWeb({
       fullHost: process.env.NEXT_PUBLIC_FULL_HOST, // Tron node URL
     });

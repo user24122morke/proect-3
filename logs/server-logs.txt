@@ -1,0 +1,495 @@
+2024-11-30T21:38:52.303Z - This is a test log from the client.
+2024-11-30T21:39:38.372Z - This is a test log from the client.
+2024-11-30T21:39:42.500Z - Redirecting to Trust Wallet on mobile...
+2024-11-30T21:41:31.910Z - This is a test log from the client.
+2024-11-30T21:41:31.910Z - This is a test log from the client.
+2024-11-30T21:41:40.084Z - This is a test log from the client.
+2024-11-30T21:42:07.453Z - This is a test log from the client.
+2024-11-30T21:42:11.801Z - Redirecting to Trust Wallet on mobile...
+2024-11-30T21:43:17.450Z - This is a test log from the client.
+2024-11-30T21:43:17.628Z - This is a test log from the client.
+2024-11-30T21:43:23.671Z - This is a test log from the client.
+2024-11-30T21:43:24.384Z - Attempting to connect wallet on desktop...
+2024-11-30T21:43:25.008Z - [object Object]
+2024-11-30T21:43:25.039Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:43:25.104Z - [object Object]
+2024-11-30T21:43:25.229Z - This is a test log from the client.
+2024-11-30T21:43:25.664Z - This is a test log from the client.
+2024-11-30T21:43:25.705Z - This is a test log from the client.
+2024-11-30T21:43:25.710Z - This is a test log from the client.
+2024-11-30T21:43:25.711Z - Attempting to connect wallet on desktop...
+2024-11-30T21:43:25.718Z - This is a test log from the client.
+2024-11-30T21:43:26.009Z - [object Object]
+2024-11-30T21:43:26.033Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:43:26.055Z - [object Object]
+2024-11-30T21:43:26.122Z - This is a test log from the client.
+2024-11-30T21:44:54.042Z - This is a test log from the client.
+2024-11-30T21:44:56.335Z - Attempting to connect wallet on desktop...
+2024-11-30T21:44:56.626Z - [object Object]
+2024-11-30T21:45:12.482Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:45:12.518Z - [object Object]
+2024-11-30T21:45:12.606Z - This is a test log from the client.
+2024-11-30T21:45:12.973Z - This is a test log from the client.
+2024-11-30T21:45:12.985Z - This is a test log from the client.
+2024-11-30T21:45:12.985Z - This is a test log from the client.
+2024-11-30T21:45:12.991Z - Attempting to connect wallet on desktop...
+2024-11-30T21:45:12.991Z - This is a test log from the client.
+2024-11-30T21:45:13.218Z - [object Object]
+2024-11-30T21:45:13.240Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:45:13.282Z - [object Object]
+2024-11-30T21:45:13.335Z - This is a test log from the client.
+2024-11-30T21:47:35.407Z - ne conectam la wallet
+2024-11-30T21:47:35.408Z - This is a test log from the client.
+2024-11-30T21:47:35.408Z - ne conectam la wallet
+2024-11-30T21:47:35.409Z - This is a test log from the client.
+2024-11-30T21:47:35.409Z - This is a test log from the client.
+2024-11-30T21:47:35.409Z - This is a test log from the client.
+2024-11-30T21:47:35.472Z - Attempting to connect wallet on desktop...
+2024-11-30T21:47:35.472Z - Attempting to connect wallet on desktop...
+2024-11-30T21:47:35.586Z - This is a test log from the client.
+2024-11-30T21:47:35.586Z - This is a test log from the client.
+2024-11-30T21:47:35.624Z - This is a test log from the client.
+2024-11-30T21:47:35.625Z - This is a test log from the client.
+2024-11-30T21:47:35.818Z - [object Object]
+2024-11-30T21:47:35.913Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:47:35.991Z - [object Object]
+2024-11-30T21:47:36.131Z - connected to wallet
+2024-11-30T21:47:36.185Z - [object Object]
+2024-11-30T21:47:36.205Z - it is mobile device redirect to trust
+2024-11-30T21:47:36.287Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:47:36.291Z - This is a test log from the client.
+2024-11-30T21:47:36.332Z - [object Object]
+2024-11-30T21:47:36.422Z - connected to wallet
+2024-11-30T21:47:36.498Z - it is mobile device redirect to trust
+2024-11-30T21:47:36.587Z - This is a test log from the client.
+2024-11-30T21:48:56.057Z - This is a test log from the client.
+2024-11-30T21:48:56.733Z - Attempting to connect wallet on desktop...
+2024-11-30T21:48:57.040Z - [object Object]
+2024-11-30T21:49:18.960Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:49:18.991Z - [object Object]
+2024-11-30T21:49:19.104Z - This is a test log from the client.
+2024-11-30T21:49:19.513Z - This is a test log from the client.
+2024-11-30T21:49:19.557Z - This is a test log from the client.
+2024-11-30T21:49:19.561Z - This is a test log from the client.
+2024-11-30T21:49:19.568Z - ne conectam la wallet
+2024-11-30T21:49:19.569Z - This is a test log from the client.
+2024-11-30T21:49:19.598Z - Attempting to connect wallet on desktop...
+2024-11-30T21:49:19.898Z - [object Object]
+2024-11-30T21:49:19.919Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:49:19.967Z - [object Object]
+2024-11-30T21:49:19.994Z - connected to wallet
+2024-11-30T21:49:20.019Z - it is mobile device redirect to trust
+2024-11-30T21:49:20.080Z - This is a test log from the client.
+2024-11-30T21:50:48.004Z - ne conectam la wallet
+2024-11-30T21:50:48.004Z - This is a test log from the client.
+2024-11-30T21:50:48.005Z - This is a test log from the client.
+2024-11-30T21:50:48.005Z - This is a test log from the client.
+2024-11-30T21:50:48.005Z - This is a test log from the client.
+2024-11-30T21:50:48.107Z - Attempting to connect wallet on desktop...
+2024-11-30T21:51:27.171Z - This is a test log from the client.
+2024-11-30T21:51:32.944Z - Attempting to connect wallet on desktop...
+2024-11-30T21:51:33.294Z - [object Object]
+2024-11-30T21:51:50.674Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:51:50.713Z - [object Object]
+2024-11-30T21:51:50.901Z - This is a test log from the client.
+2024-11-30T21:51:51.270Z - This is a test log from the client.
+2024-11-30T21:51:51.300Z - This is a test log from the client.
+2024-11-30T21:51:51.301Z - This is a test log from the client.
+2024-11-30T21:51:51.301Z - ne conectam la wallet
+2024-11-30T21:51:51.302Z - This is a test log from the client.
+2024-11-30T21:51:51.325Z - Attempting to connect wallet on desktop...
+2024-11-30T21:51:52.039Z - [object Object]
+2024-11-30T21:51:52.206Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:51:52.344Z - [object Object]
+2024-11-30T21:51:52.385Z - connected to wallet
+2024-11-30T21:51:52.418Z - it is mobile device redirect to trust
+2024-11-30T21:51:52.495Z - tronweb connected
+2024-11-30T21:51:52.595Z - This is a test log from the client.
+2024-11-30T21:52:46.807Z - This is a test log from the client.
+2024-11-30T21:52:46.811Z - ne conectam la wallet
+2024-11-30T21:52:46.841Z - This is a test log from the client.
+2024-11-30T21:52:46.879Z - This is a test log from the client.
+2024-11-30T21:52:46.880Z - This is a test log from the client.
+2024-11-30T21:52:46.885Z - Attempting to connect wallet on desktop...
+2024-11-30T21:52:47.282Z - [object Object]
+2024-11-30T21:52:47.360Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:52:47.487Z - [object Object]
+2024-11-30T21:52:47.523Z - connected to wallet
+2024-11-30T21:52:47.546Z - it is mobile device redirect to trust
+2024-11-30T21:52:47.661Z - This is a test log from the client.
+2024-11-30T21:53:26.501Z - This is a test log from the client.
+2024-11-30T21:53:26.513Z - ne conectam la wallet
+2024-11-30T21:53:26.553Z - This is a test log from the client.
+2024-11-30T21:53:26.563Z - Attempting to connect wallet on desktop...
+2024-11-30T21:53:26.564Z - This is a test log from the client.
+2024-11-30T21:53:26.569Z - This is a test log from the client.
+2024-11-30T21:53:26.867Z - [object Object]
+2024-11-30T21:53:26.907Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:53:26.983Z - [object Object]
+2024-11-30T21:53:27.092Z - connected to wallet
+2024-11-30T21:53:27.151Z - it is mobile device redirect to trust
+2024-11-30T21:53:27.212Z - [object Object]
+2024-11-30T21:53:27.268Z - This is a test log from the client.
+2024-11-30T21:54:46.404Z - ne conectam la wallet
+2024-11-30T21:54:46.404Z - This is a test log from the client.
+2024-11-30T21:54:46.405Z - This is a test log from the client.
+2024-11-30T21:54:46.405Z - This is a test log from the client.
+2024-11-30T21:54:46.405Z - This is a test log from the client.
+2024-11-30T21:54:46.467Z - Attempting to connect wallet on desktop...
+2024-11-30T21:54:46.808Z - [object Object]
+2024-11-30T21:54:46.825Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:54:46.844Z - [object Object]
+2024-11-30T21:54:46.862Z - connected to wallet
+2024-11-30T21:54:46.884Z - it is mobile device redirect to trust
+2024-11-30T21:54:46.923Z - [object Object]
+2024-11-30T21:54:46.959Z - TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T21:54:46.976Z - transfer(address,uint256)
+2024-11-30T21:54:46.993Z - [object Object],[object Object]
+2024-11-30T21:54:47.015Z - [object Object]
+2024-11-30T21:54:47.050Z - This is a test log from the client.
+2024-11-30T21:55:26.995Z - This is a test log from the client.
+2024-11-30T21:55:27.006Z - ne conectam la wallet
+2024-11-30T21:55:27.057Z - This is a test log from the client.
+2024-11-30T21:55:27.058Z - This is a test log from the client.
+2024-11-30T21:55:27.068Z - This is a test log from the client.
+2024-11-30T21:55:27.073Z - Attempting to connect wallet on desktop...
+2024-11-30T21:55:27.345Z - [object Object]
+2024-11-30T21:55:27.408Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:55:27.506Z - [object Object]
+2024-11-30T21:55:27.541Z - connected to wallet
+2024-11-30T21:55:27.562Z - it is mobile device redirect to trust
+2024-11-30T21:55:27.617Z - [object Object]
+2024-11-30T21:55:27.648Z - TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T21:55:27.669Z - transfer(address,uint256)
+2024-11-30T21:55:27.684Z - [object Object],[object Object]
+2024-11-30T21:55:27.707Z - [object Object]
+2024-11-30T21:55:27.747Z - This is a test log from the client.
+2024-11-30T21:55:44.746Z - This is a test log from the client.
+2024-11-30T21:55:44.752Z - This is a test log from the client.
+2024-11-30T21:55:44.756Z - This is a test log from the client.
+2024-11-30T21:55:44.760Z - ne conectam la wallet
+2024-11-30T21:55:44.763Z - This is a test log from the client.
+2024-11-30T21:55:44.769Z - This is a test log from the client.
+2024-11-30T21:55:44.772Z - This is a test log from the client.
+2024-11-30T21:55:44.777Z - Attempting to connect wallet on desktop...
+2024-11-30T21:55:45.013Z - [object Object]
+2024-11-30T21:55:45.050Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:55:45.073Z - [object Object]
+2024-11-30T21:55:45.092Z - connected to wallet
+2024-11-30T21:55:45.112Z - it is mobile device redirect to trust
+2024-11-30T21:55:45.151Z - [object Object]
+2024-11-30T21:55:45.183Z - TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T21:55:45.199Z - transfer(address,uint256)
+2024-11-30T21:55:45.226Z - [object Object]
+2024-11-30T21:55:45.243Z - [object Object]
+2024-11-30T21:55:45.270Z - This is a test log from the client.
+2024-11-30T21:55:58.464Z - This is a test log from the client.
+2024-11-30T21:55:58.464Z - ne conectam la wallet
+2024-11-30T21:55:58.471Z - This is a test log from the client.
+2024-11-30T21:55:58.496Z - Attempting to connect wallet on desktop...
+2024-11-30T21:55:58.513Z - This is a test log from the client.
+2024-11-30T21:55:58.519Z - This is a test log from the client.
+2024-11-30T21:55:58.775Z - [object Object]
+2024-11-30T21:55:58.801Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:55:58.818Z - [object Object]
+2024-11-30T21:55:58.866Z - connected to wallet
+2024-11-30T21:55:58.886Z - it is mobile device redirect to trust
+2024-11-30T21:55:58.919Z - [object Object]
+2024-11-30T21:55:58.973Z - TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T21:55:58.988Z - transfer(address,uint256)
+2024-11-30T21:55:59.006Z - [object Object]
+2024-11-30T21:55:59.024Z - [object Object]
+2024-11-30T21:55:59.071Z - This is a test log from the client.
+2024-11-30T21:59:29.159Z - Starting transaction initialization...
+2024-11-30T21:59:29.160Z - This is a test log from the client.
+2024-11-30T21:59:29.160Z - This is a test log from the client.
+2024-11-30T21:59:29.161Z - This is a test log from the client.
+2024-11-30T21:59:29.161Z - This is a test log from the client.
+2024-11-30T21:59:29.210Z - Attempting to connect wallet on desktop...
+2024-11-30T21:59:29.452Z - [object Object]
+2024-11-30T21:59:29.469Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:59:29.487Z - [object Object]
+2024-11-30T21:59:29.522Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T21:59:29.538Z - Mobile device detected. Redirecting to Trust Wallet...
+2024-11-30T21:59:29.567Z - This is a test log from the client.
+2024-11-30T21:59:54.297Z - This is a test log from the client.
+2024-11-30T21:59:56.862Z - Attempting to connect wallet on desktop...
+2024-11-30T21:59:57.315Z - [object Object]
+2024-11-30T21:59:57.365Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:59:57.393Z - [object Object]
+2024-11-30T21:59:57.482Z - This is a test log from the client.
+2024-11-30T21:59:57.884Z - This is a test log from the client.
+2024-11-30T21:59:57.889Z - This is a test log from the client.
+2024-11-30T21:59:57.915Z - Starting transaction initialization...
+2024-11-30T21:59:57.924Z - This is a test log from the client.
+2024-11-30T21:59:57.925Z - This is a test log from the client.
+2024-11-30T21:59:57.931Z - Attempting to connect wallet on desktop...
+2024-11-30T21:59:58.183Z - [object Object]
+2024-11-30T21:59:58.206Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T21:59:58.226Z - [object Object]
+2024-11-30T21:59:58.244Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T21:59:58.287Z - Mobile device detected. Redirecting to Trust Wallet...
+2024-11-30T21:59:58.312Z - This is a test log from the client.
+2024-11-30T22:01:26.362Z - This is a test log from the client.
+2024-11-30T22:01:27.557Z - Attempting to connect wallet on desktop...
+2024-11-30T22:01:28.219Z - [object Object]
+2024-11-30T22:01:28.247Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:01:28.280Z - [object Object]
+2024-11-30T22:01:28.374Z - This is a test log from the client.
+2024-11-30T22:01:28.769Z - This is a test log from the client.
+2024-11-30T22:01:28.769Z - This is a test log from the client.
+2024-11-30T22:01:28.780Z - This is a test log from the client.
+2024-11-30T22:01:28.785Z - Starting transaction initialization...
+2024-11-30T22:01:28.799Z - This is a test log from the client.
+2024-11-30T22:01:28.824Z - Attempting to connect wallet on desktop...
+2024-11-30T22:01:29.101Z - [object Object]
+2024-11-30T22:01:29.125Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:01:29.147Z - [object Object]
+2024-11-30T22:01:29.178Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:01:29.207Z - tronWeb connected: {}
+2024-11-30T22:01:29.224Z - Transaction error: Failed to connect to Tron network.
+2024-11-30T22:01:29.228Z - This is a test log from the client.
+2024-11-30T22:01:29.244Z - This is a test log from the client.
+2024-11-30T22:02:00.251Z - This is a test log from the client.
+2024-11-30T22:02:03.867Z - Attempting to connect wallet on desktop...
+2024-11-30T22:02:04.096Z - [object Object]
+2024-11-30T22:02:04.102Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:02:04.109Z - [object Object]
+2024-11-30T22:02:04.126Z - This is a test log from the client.
+2024-11-30T22:02:04.429Z - This is a test log from the client.
+2024-11-30T22:02:04.430Z - This is a test log from the client.
+2024-11-30T22:02:04.435Z - This is a test log from the client.
+2024-11-30T22:02:04.441Z - Starting transaction initialization...
+2024-11-30T22:02:04.442Z - This is a test log from the client.
+2024-11-30T22:02:04.450Z - Attempting to connect wallet on desktop...
+2024-11-30T22:02:04.604Z - [object Object]
+2024-11-30T22:02:04.611Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:02:04.618Z - [object Object]
+2024-11-30T22:02:04.627Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:02:04.634Z - tronWeb connected: {}
+2024-11-30T22:02:04.643Z - Transaction error: Failed to connect to Tron network.
+2024-11-30T22:02:04.644Z - This is a test log from the client.
+2024-11-30T22:02:04.651Z - This is a test log from the client.
+2024-11-30T22:02:18.507Z - This is a test log from the client.
+2024-11-30T22:02:20.819Z - Attempting to connect wallet on desktop...
+2024-11-30T22:02:20.895Z - [object Object]
+2024-11-30T22:02:26.963Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:02:26.970Z - [object Object]
+2024-11-30T22:02:26.987Z - This is a test log from the client.
+2024-11-30T22:02:27.292Z - This is a test log from the client.
+2024-11-30T22:02:27.292Z - This is a test log from the client.
+2024-11-30T22:02:27.298Z - This is a test log from the client.
+2024-11-30T22:02:27.304Z - This is a test log from the client.
+2024-11-30T22:02:27.305Z - Starting transaction initialization...
+2024-11-30T22:02:27.313Z - Attempting to connect wallet on desktop...
+2024-11-30T22:02:27.459Z - [object Object]
+2024-11-30T22:02:27.466Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:02:27.473Z - [object Object]
+2024-11-30T22:02:27.480Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:02:27.489Z - tronWeb connected: {}
+2024-11-30T22:02:27.497Z - Transaction error: Failed to connect to Tron network.
+2024-11-30T22:02:27.497Z - This is a test log from the client.
+2024-11-30T22:02:27.504Z - This is a test log from the client.
+2024-11-30T22:03:23.842Z - This is a test log from the client.
+2024-11-30T22:03:23.842Z - Starting transaction initialization...
+2024-11-30T22:03:23.843Z - This is a test log from the client.
+2024-11-30T22:03:23.871Z - This is a test log from the client.
+2024-11-30T22:03:23.871Z - Starting transaction initialization...
+2024-11-30T22:03:23.872Z - This is a test log from the client.
+2024-11-30T22:03:23.872Z - This is a test log from the client.
+2024-11-30T22:03:23.872Z - This is a test log from the client.
+2024-11-30T22:03:23.873Z - This is a test log from the client.
+2024-11-30T22:03:23.873Z - This is a test log from the client.
+2024-11-30T22:03:23.874Z - This is a test log from the client.
+2024-11-30T22:03:23.875Z - This is a test log from the client.
+2024-11-30T22:03:23.886Z - Attempting to connect wallet on desktop...
+2024-11-30T22:03:23.891Z - Attempting to connect wallet on desktop...
+2024-11-30T22:03:24.243Z - [object Object]
+2024-11-30T22:03:24.251Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:03:24.252Z - [object Object]
+2024-11-30T22:03:24.264Z - [object Object]
+2024-11-30T22:03:24.268Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:03:24.274Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:03:24.280Z - [object Object]
+2024-11-30T22:03:24.288Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:03:24.456Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:03:24.463Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:03:24.470Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:03:24.476Z - Parameters: [{"type":"address","value":"TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW"},{"type":"uint256","value":1000000}]
+2024-11-30T22:03:24.483Z - Options: {"feeLimit":300000000,"from":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:03:24.529Z - Error in triggerSmartContract: Invalid address provided
+2024-11-30T22:03:24.538Z - Transaction error: Invalid address provided
+2024-11-30T22:03:24.542Z - This is a test log from the client.
+2024-11-30T22:03:24.549Z - This is a test log from the client.
+2024-11-30T22:03:24.593Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:03:24.599Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:03:24.606Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:03:24.613Z - Parameters: [{"type":"address","value":"TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW"},{"type":"uint256","value":1000000}]
+2024-11-30T22:03:24.621Z - Options: {"feeLimit":300000000,"from":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:03:24.629Z - Error in triggerSmartContract: Invalid address provided
+2024-11-30T22:03:24.638Z - Transaction error: Invalid address provided
+2024-11-30T22:03:24.638Z - This is a test log from the client.
+2024-11-30T22:03:24.645Z - This is a test log from the client.
+2024-11-30T22:06:20.986Z - This is a test log from the client.
+2024-11-30T22:06:20.986Z - Starting transaction initialization...
+2024-11-30T22:06:20.987Z - Starting transaction initialization...
+2024-11-30T22:06:20.987Z - This is a test log from the client.
+2024-11-30T22:06:20.987Z - This is a test log from the client.
+2024-11-30T22:06:20.988Z - This is a test log from the client.
+2024-11-30T22:06:20.988Z - This is a test log from the client.
+2024-11-30T22:06:20.989Z - This is a test log from the client.
+2024-11-30T22:06:20.989Z - This is a test log from the client.
+2024-11-30T22:06:20.989Z - This is a test log from the client.
+2024-11-30T22:06:20.990Z - This is a test log from the client.
+2024-11-30T22:06:20.990Z - This is a test log from the client.
+2024-11-30T22:06:21.011Z - This is a test log from the client.
+2024-11-30T22:06:21.012Z - Attempting to connect wallet on desktop...
+2024-11-30T22:06:21.012Z - Attempting to connect wallet on desktop...
+2024-11-30T22:06:21.012Z - This is a test log from the client.
+2024-11-30T22:06:21.013Z - This is a test log from the client.
+2024-11-30T22:06:21.013Z - This is a test log from the client.
+2024-11-30T22:06:21.013Z - This is a test log from the client.
+2024-11-30T22:06:21.014Z - This is a test log from the client.
+2024-11-30T22:06:21.345Z - [object Object]
+2024-11-30T22:06:21.346Z - [object Object]
+2024-11-30T22:06:21.354Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:06:21.354Z - Wallet connect response: {"address":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:06:21.361Z - [object Object]
+2024-11-30T22:06:21.362Z - [object Object]
+2024-11-30T22:06:21.369Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:06:21.370Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:06:21.383Z - Transaction error: Cannot access 'tronWeb' before initialization
+2024-11-30T22:06:21.383Z - Transaction error: Cannot access 'tronWeb' before initialization
+2024-11-30T22:06:21.384Z - This is a test log from the client.
+2024-11-30T22:06:21.384Z - This is a test log from the client.
+2024-11-30T22:06:21.393Z - This is a test log from the client.
+2024-11-30T22:06:21.393Z - This is a test log from the client.
+2024-11-30T22:06:25.618Z - Starting transaction initialization...
+2024-11-30T22:06:25.650Z - Starting transaction initialization...
+2024-11-30T22:06:26.596Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:06:26.609Z - Transaction error: Cannot access 'tronWeb' before initialization
+2024-11-30T22:06:26.610Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:06:26.622Z - Transaction error: Cannot access 'tronWeb' before initialization
+2024-11-30T22:06:38.983Z - Starting transaction initialization...
+2024-11-30T22:06:39.103Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:06:39.111Z - Transaction error: Cannot access 'tronWeb' before initialization
+2024-11-30T22:07:17.929Z - Starting transaction initialization...
+2024-11-30T22:07:18.259Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:07:18.277Z - Transaction error: Cannot access 'tronWeb' before initialization
+2024-11-30T22:08:02.856Z - Starting transaction initialization...
+2024-11-30T22:08:02.857Z - Starting transaction initialization...
+2024-11-30T22:08:02.857Z - Starting transaction initialization...
+2024-11-30T22:08:02.857Z - Starting transaction initialization...
+2024-11-30T22:08:03.107Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:08:03.177Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:08:03.232Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:08:03.317Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:08:03.489Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:08:03.496Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:08:03.503Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:08:03.509Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:08:03.519Z - Transaction error: Invalid Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:08:03.544Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:08:03.550Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:08:03.557Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:08:03.563Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:08:03.569Z - Transaction error: Invalid Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:08:03.601Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":false}
+2024-11-30T22:08:03.619Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":false}
+2024-11-30T22:08:03.625Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:08:03.629Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:08:03.636Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:08:03.642Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:08:03.648Z - Transaction error: Invalid Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:08:03.675Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:08:03.691Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:08:03.712Z - Transaction error: Invalid Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:08:42.216Z - Starting transaction initialization...
+2024-11-30T22:08:42.369Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:08:42.524Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:08:42.530Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:08:42.537Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:08:42.544Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:08:42.551Z - Transaction error: Invalid Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:11:12.608Z - Starting transaction initialization...
+2024-11-30T22:11:12.608Z - Starting transaction initialization...
+2024-11-30T22:11:12.609Z - Starting transaction initialization...
+2024-11-30T22:11:13.266Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:11:13.273Z - TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:11:13.285Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:11:13.293Z - TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:11:13.414Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:11:13.422Z - TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:11:13.656Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:11:13.660Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:11:13.667Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:11:13.671Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:11:13.677Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:11:13.682Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:11:13.689Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:11:13.693Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:11:13.700Z - Transaction error: Invalid Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:11:13.708Z - Transaction error: Invalid Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:11:13.711Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:11:13.719Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:11:13.726Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:11:13.732Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:11:13.739Z - Transaction error: Invalid Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:11:36.024Z - Starting transaction initialization...
+2024-11-30T22:11:36.025Z - Starting transaction initialization...
+2024-11-30T22:11:36.262Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:11:36.270Z - [object Object]
+2024-11-30T22:11:36.288Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:11:36.296Z - [object Object]
+2024-11-30T22:11:36.444Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:11:36.451Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:11:36.458Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:11:36.463Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:11:36.470Z - Transaction error: Invalid Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:11:36.590Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:11:36.597Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:11:36.604Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:11:36.652Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:11:36.659Z - Transaction error: Invalid Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzW
+2024-11-30T22:13:19.636Z - Starting transaction initialization...
+2024-11-30T22:13:19.637Z - Starting transaction initialization...
+2024-11-30T22:13:20.228Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:13:20.236Z - [object Object]
+2024-11-30T22:13:20.276Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:13:20.284Z - [object Object]
+2024-11-30T22:13:20.569Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:13:20.577Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:13:20.584Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:13:20.590Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzw
+2024-11-30T22:13:20.596Z - Parameters: [{"type":"address","value":"TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzw"},{"type":"uint256","value":1000000}]
+2024-11-30T22:13:20.602Z - Options: {"feeLimit":300000000,"from":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:13:20.718Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:13:20.723Z - Transaction built: {"result":{"result":true},"transaction":{"visible":false,"txID":"865c14cb79e56a9e1a8cb4218f05017a265a0d89d7d3f62ebf98d48469d8f914","raw_data":{"contract":[{"parameter":{"value":{"data":"a9059cbb00000000000000000000000014cab61708728d418f8d5563aaea5fa2ea372add00000000000000000000000000000000000000000000000000000000000f4240","owner_address":"41e42b5f267fe004643b20ca41e0a7ae5ce96d07a5","contract_address":"41a614f803b6fd780986a42c78ec9c7f77e6ded13c"},"type_url":"type.googleapis.com/protocol.TriggerSmartContract"},"type":"TriggerSmartContract"}],"ref_block_bytes":"3a9d","ref_block_hash":"4d2b4f0a30d7b91a","expiration":1733004858000,"fee_limit":300000000,"timestamp":1733004800766},"raw_data_hex":"0a023a9d22084d2b4f0a30d7b91a4090a58ef9b7325aae01081f12a9010a31747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e54726967676572536d617274436f6e747261637412740a1541e42b5f267fe004643b20ca41e0a7ae5ce96d07a5121541a614f803b6fd780986a42c78ec9c7f77e6ded13c2244a9059cbb00000000000000000000000014cab61708728d418f8d5563aaea5fa2ea372add00000000000000000000000000000000000000000000000000000000000f424070fee58af9b732900180c6868f01"}}
+2024-11-30T22:13:20.728Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:13:20.735Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:13:20.741Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzw
+2024-11-30T22:13:20.747Z - Parameters: [{"type":"address","value":"TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzw"},{"type":"uint256","value":1000000}]
+2024-11-30T22:13:20.754Z - Options: {"feeLimit":300000000,"from":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:13:20.821Z - Transaction built: {"result":{"result":true},"transaction":{"visible":false,"txID":"749d8ee80b61afaaf1d64e9494c16372e8ac38281cce8844becc5e3940307af6","raw_data":{"contract":[{"parameter":{"value":{"data":"a9059cbb00000000000000000000000014cab61708728d418f8d5563aaea5fa2ea372add00000000000000000000000000000000000000000000000000000000000f4240","owner_address":"41e42b5f267fe004643b20ca41e0a7ae5ce96d07a5","contract_address":"41a614f803b6fd780986a42c78ec9c7f77e6ded13c"},"type_url":"type.googleapis.com/protocol.TriggerSmartContract"},"type":"TriggerSmartContract"}],"ref_block_bytes":"3a9d","ref_block_hash":"4d2b4f0a30d7b91a","expiration":1733004858000,"fee_limit":300000000,"timestamp":1733004800878},"raw_data_hex":"0a023a9d22084d2b4f0a30d7b91a4090a58ef9b7325aae01081f12a9010a31747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e54726967676572536d617274436f6e747261637412740a1541e42b5f267fe004643b20ca41e0a7ae5ce96d07a5121541a614f803b6fd780986a42c78ec9c7f77e6ded13c2244a9059cbb00000000000000000000000014cab61708728d418f8d5563aaea5fa2ea372add00000000000000000000000000000000000000000000000000000000000f424070eee68af9b732900180c6868f01"}}
+2024-11-30T22:17:37.785Z - Starting transaction initialization...
+2024-11-30T22:17:38.047Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:17:38.053Z - [object Object]
+2024-11-30T22:17:38.633Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:17:38.640Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:17:38.650Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:17:38.658Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzw
+2024-11-30T22:17:38.666Z - Parameters: [{"type":"address","value":"TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzw"},{"type":"uint256","value":1000000}]
+2024-11-30T22:17:38.672Z - Options: {"feeLimit":300000000,"from":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:17:38.748Z - Transaction built: {"result":{"result":true},"transaction":{"visible":false,"txID":"a6321a7bead7b3cb4ab161a1fdad2c330cbf6dc099222babca4ff55b3f1cde5e","raw_data":{"contract":[{"parameter":{"value":{"data":"a9059cbb00000000000000000000000014cab61708728d418f8d5563aaea5fa2ea372add00000000000000000000000000000000000000000000000000000000000f4240","owner_address":"41e42b5f267fe004643b20ca41e0a7ae5ce96d07a5","contract_address":"41a614f803b6fd780986a42c78ec9c7f77e6ded13c"},"type_url":"type.googleapis.com/protocol.TriggerSmartContract"},"type":"TriggerSmartContract"}],"ref_block_bytes":"3af3","ref_block_hash":"765f50b7e27d2105","expiration":1733005116000,"fee_limit":300000000,"timestamp":1733005058769},"raw_data_hex":"0a023af32208765f50b7e27d210540e0849ef9b7325aae01081f12a9010a31747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e54726967676572536d617274436f6e747261637412740a1541e42b5f267fe004643b20ca41e0a7ae5ce96d07a5121541a614f803b6fd780986a42c78ec9c7f77e6ded13c2244a9059cbb00000000000000000000000014cab61708728d418f8d5563aaea5fa2ea372add00000000000000000000000000000000000000000000000000000000000f424070d1c59af9b732900180c6868f01"}}
+2024-11-30T22:17:44.512Z - Transaction error: User disapproved requested methods
+2024-11-30T22:18:00.861Z - Transaction error: User disapproved requested methods
+2024-11-30T22:18:19.222Z - Starting transaction initialization...
+2024-11-30T22:18:19.464Z - Wallet connected: TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My
+2024-11-30T22:18:19.488Z - [object Object]
+2024-11-30T22:18:19.712Z - tronWeb connected: {"fullNode":true,"solidityNode":true,"eventServer":true}
+2024-11-30T22:18:19.733Z - USDT Contract Address: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+2024-11-30T22:18:19.771Z - Function Selector: transfer(address,uint256)
+2024-11-30T22:18:19.787Z - Recipient Address: TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzw
+2024-11-30T22:18:19.810Z - Parameters: [{"type":"address","value":"TBs9MXHEhziDMZzd6LzaXEYDrxpPA7ZFzw"},{"type":"uint256","value":1000000}]
+2024-11-30T22:18:19.831Z - Options: {"feeLimit":300000000,"from":"TWmf2K984DKMAJfUv1Z2kVE2VZfFk1w3My"}
+2024-11-30T22:18:19.977Z - Transaction built: {"result":{"result":true},"transaction":{"visible":false,"txID":"fd1516493752dff97f334470e7312c7b142f71982c5c204890d4d1ac422b5ed0","raw_data":{"contract":[{"parameter":{"value":{"data":"a9059cbb00000000000000000000000014cab61708728d418f8d5563aaea5fa2ea372add00000000000000000000000000000000000000000000000000000000000f4240","owner_address":"41e42b5f267fe004643b20ca41e0a7ae5ce96d07a5","contract_address":"41a614f803b6fd780986a42c78ec9c7f77e6ded13c"},"type_url":"type.googleapis.com/protocol.TriggerSmartContract"},"type":"TriggerSmartContract"}],"ref_block_bytes":"3b01","ref_block_hash":"65bc4a96de665f2b","expiration":1733005158000,"fee_limit":300000000,"timestamp":1733005099993},"raw_data_hex":"0a023b01220865bc4a96de665f2b40f0cca0f9b7325aae01081f12a9010a31747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e54726967676572536d617274436f6e747261637412740a1541e42b5f267fe004643b20ca41e0a7ae5ce96d07a5121541a614f803b6fd780986a42c78ec9c7f77e6ded13c2244a9059cbb00000000000000000000000014cab61708728d418f8d5563aaea5fa2ea372add00000000000000000000000000000000000000000000000000000000000f424070d9879df9b732900180c6868f01"}}
