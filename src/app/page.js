@@ -1,9 +1,13 @@
 
 import { WalletProvider } from "./context/globalContext";
 
-import Wrapper from "./components/Wrapper";
 import "../app/globals.css"
-import WalletERC20 from "./components/WalletERC20/WalletERC20";
+import Navbar from "./components/HomeComponents/Navbar";
+import HeroSection from "./components/HomeComponents/HeroSection";
+import TrustSection from "./components/HomeComponents/TrustSection/TrustSection";
+import PartnersSlider from "./components/HomeComponents/PartnersSlider";
+import StatsSection from "./components/HomeComponents/StatsSection";
+import AMLServices from "./components/HomeComponents/AMLServices";
 
 
 
@@ -12,8 +16,13 @@ export default function Home() {
   return (
     <>
       <WalletProvider>
-        <Wrapper/>
-        {/* <WalletERC20/> */}
+        <Navbar/>
+        <HeroSection/>
+        <TrustSection/>
+        <PartnersSlider/>
+        <StatsSection/>
+        <AMLServices/>
+       
       </WalletProvider>
     </>
   );

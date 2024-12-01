@@ -8,3 +8,26 @@
     display: none !important;
   }
 }
+
+/* Ascunde scrollbar-ul */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite; /* 20s pentru o mișcare lentă și continuă */
+}
+

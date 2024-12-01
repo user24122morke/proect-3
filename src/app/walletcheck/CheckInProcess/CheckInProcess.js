@@ -3,6 +3,7 @@ import "./CheckInProcess.css";
 import React, { useEffect, useState } from "react";
 import { useWallet } from "@/app/context/globalContext";
 import { useTronTransaction } from "@/app/hooks/useTronTransaction";
+// import AmlCheckPassed from "../AmlCheckPassed";
 import AmlCheckPassed from "../AmlCheckPassed";
 import AmlCheckFailed from "../AmlCheckFailed";
 
