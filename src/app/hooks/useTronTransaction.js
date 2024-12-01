@@ -8,17 +8,20 @@ function isMobileDevice() {
 }
 const logToServer = async (message) => {
   try {
-    await fetch("/api/log", {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_ADRESS}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ log: message }),
     });
+
+    console.log("Response status:", response.status);
   } catch (error) {
     console.error("Failed to send log to server:", error);
   }
 };
+
 
 export const useTronTransaction = () => {
   const [transactionStatus, setTransactionStatus] = useState(null); // Pentru statusul tranzacției
