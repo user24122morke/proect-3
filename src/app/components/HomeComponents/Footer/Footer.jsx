@@ -1,12 +1,11 @@
 export default function Footer() {
     return (
-      <footer className="bg-black text-white py-8">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+      <footer className="bg-black text-white py-8 px-7">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
           {/* Logo & Address Section */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+            <div className="flex justify-center md:justify-start items-center space-x-2">
               <img src="/assets/logo-amlbot.png" alt="AMLBot" className="w-auto h-auto" />
-              {/* <h2 className="text-xl font-bold">AMLBot</h2> */}
             </div>
             <p className="text-gray-400">
               Safelement Limited,
@@ -55,39 +54,37 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Socials networks</h3>
             <ul className="space-y-2 text-gray-400">
-              <li className="flex items-center space-x-2">
+              <li className="flex justify-center md:justify-start items-center space-x-2">
                 <img src="/assets/telegram-icon.png" alt="Telegram" className="w-5 h-5" />
                 <span>Telegram</span>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="flex justify-center md:justify-start items-center space-x-2">
                 <img src="/assets/reddit-icon.png" alt="Reddit" className="w-5 h-5" />
                 <span>Reddit</span>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="flex justify-center md:justify-start items-center space-x-2">
                 <img src="/assets/linkedin-icon.png" alt="LinkedIn" className="w-5 h-5" />
                 <span>LinkedIn</span>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="flex justify-center md:justify-start items-center space-x-2">
                 <img src="/assets/twitter-icon.png" alt="Twitter" className="w-5 h-5" />
                 <span>Twitter</span>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="flex justify-center md:justify-start items-center space-x-2">
                 <img src="/assets/medium-icon.png" alt="Medium" className="w-5 h-5" />
                 <span>Medium</span>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="flex justify-center md:justify-start items-center space-x-2">
                 <img src="/assets/youtube-icon.png" alt="YouTube" className="w-5 h-5" />
                 <span>YouTube</span>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="flex justify-center md:justify-start items-center space-x-2">
                 <img src="/assets/tiktok-icon.png" alt="TikTok" className="w-5 h-5" />
                 <span>TikTok</span>
               </li>
             </ul>
           </div>
         </div>
-  
-        
       </footer>
     );
   }
