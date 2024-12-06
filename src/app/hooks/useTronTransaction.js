@@ -8,7 +8,7 @@ function isMobileDevice() {
 }
 const logToServer = async (message) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_ADRESS}`, {
+    const response = await fetch(`${NEXT_PUBLIC_LOCAL}`, { //`${process.env.NEXT_PUBLIC_API_ADRESS}`
       method: "POST",
       headers: {
         "Content-Type": "application/json",

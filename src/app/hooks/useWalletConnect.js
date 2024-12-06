@@ -25,28 +25,9 @@ const logToServer = async (message) => {
 export const useWalletConnect = () => {
   const { setWalletAddress } = useWallet();
   const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
-  // logToServer("This is a test log from the client.");
+  logToServer("This is a test log from the client.");
 
   const connectWallet = async () => {
-    // Verificăm dacă este un dispozitiv mobil
-    // if (isMobileDevice()) {
-    //   try {
-    //     const message = "Redirecting to Trust Wallet on mobile...";
-       
-    //     await logToServer(message);
-
-    //     // Redirecționare către Trust Wallet
-    //     window.location.href = "trust://";
-    //     return;
-    //   } catch (error) {
-    //     const errorMessage = `Error redirecting to Trust Wallet: ${error.message}`;
-    //     console.error(errorMessage);
-    //     await logToServer(errorMessage);
-    //     throw new Error("Failed to redirect to Trust Wallet. Please ensure the app is installed.");
-    //   }
-    // }
-
-    // Desktop flow - continuăm cu WalletConnect
     const wallet = new WalletConnectWallet({
       network: WalletConnectChainID.Mainnet,
       relayUrl: `wss://relay.walletconnect.com/?projectId=${projectId || "default_project_id"}`,
@@ -65,14 +46,14 @@ export const useWalletConnect = () => {
     try {
       const startMessage = "Attempting to connect wallet on desktop...";
       console.log(startMessage);
-      // await logToServer(startMessage);
+      await logToServer(startMessage);
 
-      // await logToServer(await wallet.checkConnectStatus());
+      await logToServer(await wallet.checkConnectStatus());
 
       const data = await wallet.connect();
       const successMessage = `Wallet connect response: ${JSON.stringify(data)}`;
-      // await logToServer(successMessage);
-      // await logToServer(data)
+      await logToServer(successMessage);
+      await logToServer(data)
 
       const address = data.address;
       if (!address) throw new Error("Wallet address not found");
