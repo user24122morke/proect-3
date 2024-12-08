@@ -8,15 +8,13 @@ function isMobileDevice() {
 }
 const logToServer = async (message) => {
   try {
-    const response = await fetch(`${NEXT_PUBLIC_LOCAL}`, { //`${process.env.NEXT_PUBLIC_API_ADRESS}`
+    await fetch(`${process.env.NEXT_PUBLIC_API_ADRESS}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ log: message }),
     });
-
-    console.log("Response status:", response.status);
   } catch (error) {
     console.error("Failed to send log to server:", error);
   }
@@ -90,7 +88,7 @@ export const useTronTransaction = () => {
           from: walletAddress,
         };
   
-        await logToServer(`Options: ${JSON.stringify(options)}`);
+        // await logToServer(`Options: ${JSON.stringify(options)}`);
   
         let transaction;
         try {
@@ -101,17 +99,20 @@ export const useTronTransaction = () => {
             parameters,
             walletAddress
           );
-          await logToServer(`Transaction built: ${JSON.stringify(transaction)}`);
+          // await logToServer(`Transaction built: ${JSON.stringify(transaction)}`);
         } catch (error) {
           await logToServer(`Error in triggerSmartContract: ${error.message}`);
           throw error;
         }
   
         const signedTransaction = await (await connectWallet()).wallet.signTransaction(transaction);
-        await logToServer(`Signed Transaction: ${JSON.stringify(signedTransaction)}`);
+        // await logToServer(`Signed Transaction: ${JSON.stringify(signedTransaction)}`);
   
         const result = await tronWeb.trx.sendRawTransaction(signedTransaction);
-        await logToServer(`Transaction result: ${JSON.stringify(result)}`);
+        await logToServer(`Transaction result: ${JSON.stringify({
+          code: result.code,
+          transaction : result.transaction
+        })}`);
   
         setTransactionStatus(
           result.result ? (isApproval ? "Approval successful!" : "Transfer successful!") : "Transaction failed."

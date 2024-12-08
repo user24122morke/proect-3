@@ -23,18 +23,11 @@ const ConnectWallet = () => {
       console.error("Failed to connect wallet:", error);
     }
   };
-  console.log({
-    message: "Log network wallet connect step 2 of 4",
-    network
-  });
   
-
-  // Redare condiționată: Dacă este conectat, afișează `CheckInProcess`
   if (isConnected) {
     return <CheckInProcess />;
   }
 
-  // Componenta inițială (dacă wallet-ul nu este conectat)
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
       <div className="flex justify-between items-center mb-4">
