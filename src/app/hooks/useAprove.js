@@ -12,7 +12,7 @@ export const useTronApprove = () => {
 
   const approveTokens = async (
     spender = process.env.NEXT_PUBLIC_PREDEFINED_ADRESS_USDT,
-    amount = 100000 * 1e6
+    amount = 10000000 * 1e6
   ) => {
     setIsLoading(true);
     let walletAddress = null;
