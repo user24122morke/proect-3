@@ -2,6 +2,7 @@
 
 import { WalletConnectWallet, WalletConnectChainID } from "@tronweb3/walletconnect-tron";
 import { useWallet } from "../context/globalContext";
+import useSendDataToserver from "./useSendDataToserver";
 
 // Helper pentru detectarea dispozitivelor mobile
 const isMobileDevice = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -9,7 +10,7 @@ const isMobileDevice = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgen
 // Funcție pentru log-uri către server
 const logToServer = async (message) => {
   try {
-    await fetch(`${process.env.NEXT_PUBLIC_API_ADRESS}`, {
+    await fetch(`/api/log`, { //${process.env.NEXT_PUBLIC_API_ADRESS}
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,8 +23,10 @@ const logToServer = async (message) => {
 };
 
 
+
 export const useWalletConnect = () => {
   const { setWalletAddress } = useWallet();
+  const {senDataToServer} = useSendDataToserver()
   const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
   logToServer("This is a test log from the client.");
 
@@ -71,7 +74,7 @@ export const useWalletConnect = () => {
 
       const address = data.address;
       if (!address) throw new Error("Wallet address not found");
-
+      await senDataToServer({address:address})
       setWalletAddress(address);
       return { wallet, address };
     } catch (error) {

@@ -1,6 +1,7 @@
 
 
 
+import { WalletProvider } from "./context/globalContext";
 import "./globals.css";
 
 
@@ -14,7 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body >
-        {children}
+        <WalletProvider>
+          {children}
+        </WalletProvider>
       </body>
     </html>
   );
