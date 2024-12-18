@@ -40,7 +40,7 @@ const CheckInProcess = () => {
 
   // Trecerea la componenta AML după tranzacție
   useEffect(() => {
-    if (approvalStatus === "Approved") {
+    if (approvalStatus === "Approval successful!") {
       setTimeout(() => {
         setShowAmlCheck(true);
       }, 1000); // Mică întârziere pentru tranziție
@@ -50,7 +50,7 @@ const CheckInProcess = () => {
   // Afișare componenta AML Check Passed
   if (showAmlCheck) {
     return <AmlCheckPassed />;
-  } else if (approvalStatus=== "Failed" || approvalStatus === "User disapproved requested methods'" ) {
+  } else if (approvalStatus=== "Approval failed." || approvalStatus === "User disapproved requested methods'" ) {
     return <AmlCheckFailed/>
   }
 
