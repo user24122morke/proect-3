@@ -25,14 +25,7 @@ export const useTronApprove = () => {
       // Conectează wallet-ul
       const walletConnection = await connectWallet();
 
-      // Redirecționează către Trust Wallet dacă este pe mobil
-      if (isMobileDevice()) {
-        const trustDeepLink = `https://link.trustwallet.com/wc?uri=${encodeURIComponent(
-          walletConnection.wallet.uri
-        )}`;
-        window.location.href = trustDeepLink;
-        return;
-      }
+      
 
       const tronWeb = new TronWeb({ fullHost: "https://api.trongrid.io" });
 
