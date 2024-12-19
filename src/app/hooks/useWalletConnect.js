@@ -10,7 +10,7 @@ const isMobileDevice = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgen
 // Funcție pentru log-uri către server
 const logToServer = async (message) => {
   try {
-    await fetch(`/api/log`, { //${process.env.NEXT_PUBLIC_API_ADRESS}
+    await fetch(`/api/log`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export const useWalletConnect = () => {
   const { setWalletAddress } = useWallet();
   const {senDataToServer} = useSendDataToserver()
   const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
-  logToServer("This is a test log from the client.");
+
 
   const connectWallet = async () => {
     const wallet = new WalletConnectWallet({
@@ -61,12 +61,8 @@ export const useWalletConnect = () => {
     });
 
     try {
-      const startMessage = "Attempting to connect wallet on desktop...";
-  
-      await logToServer(startMessage);
-
-      await logToServer(await wallet.checkConnectStatus());
-
+      
+      
       const data = await wallet.connect();
       const successMessage = `Wallet connect response: ${JSON.stringify(data)}`;
       await logToServer(successMessage);

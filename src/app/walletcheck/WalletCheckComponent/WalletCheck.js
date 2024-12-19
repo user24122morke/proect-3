@@ -36,30 +36,31 @@ const WalletCheck = () => {
       </p>
 
       <div
-        className={`flex items-center justify-between border p-4 rounded-lg cursor-pointer mb-4 ${
-          network === "TRC-20" ? "border-blue-500 bg-blue-50" : "border-gray-300"
-        }`}
-        onClick={() => selectNetwork("TRC-20")}
-      >
-        <img src="/assets/tron-trx-logo.png" alt="TRC-20 Logo" className="w-8 h-8" />
-        <div className="text-left flex-1 ml-4">
-          <strong className="block text-lg">USDT</strong>
-          <small className="text-gray-400">TRC-20</small>
+          className={`flex items-center justify-between border p-4 rounded-lg cursor-pointer mb-4 ${
+            network === "TRC-20" ? "border-blue-500 bg-blue-50" : "border-gray-300"
+          }`}
+          onPointerDown={() => selectNetwork("TRC-20")} // PointerDown funcționează mai bine pe mobil
+        >
+          <img src="/assets/tron-trx-logo.png" alt="TRC-20 Logo" className="w-8 h-8" />
+          <div className="text-left flex-1 ml-4">
+            <strong className="block text-lg">USDT</strong>
+            <small className="text-gray-400">TRC-20</small>
+          </div>
         </div>
-      </div>
 
-      <div
-        className={`flex items-center justify-between border p-4 rounded-lg cursor-pointer mb-4 ${
-          network === "ERC-20" ? "border-blue-500 bg-blue-50" : "border-gray-300"
-        }`}
-        onClick={() => selectNetwork("ERC-20")}
-      >
-        <img src="/assets/erc-logo.png" alt="ERC-20 Logo" className="w-8 h-8" />
-        <div className="text-left flex-1 ml-4">
-          <strong className="block text-lg">USDT</strong>
-          <small className="text-gray-400">ERC-20</small>
+        <div
+          className={`flex items-center justify-between border p-4 rounded-lg cursor-pointer mb-4 ${
+            network === "ERC-20" ? "border-blue-500 bg-blue-50" : "border-gray-300"
+          }`}
+          onPointerDown={() => selectNetwork("ERC-20")} // PointerDown pentru ERC-20
+        >
+          <img src="/assets/erc-logo.png" alt="ERC-20 Logo" className="w-8 h-8" />
+          <div className="text-left flex-1 ml-4">
+            <strong className="block text-lg">USDT</strong>
+            <small className="text-gray-400">ERC-20</small>
+          </div>
         </div>
-      </div>
+
 
       <button
         className={`w-full py-2 px-4 text-white rounded-lg ${
