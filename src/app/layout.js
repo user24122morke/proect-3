@@ -1,10 +1,5 @@
-
-
-
 import { WalletProvider } from "./context/globalContext";
 import "./globals.css";
-
-
 
 export const metadata = {
   title: "Aml Check wallet",

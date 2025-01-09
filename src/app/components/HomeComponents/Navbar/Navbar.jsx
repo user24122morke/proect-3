@@ -2,12 +2,26 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useWallet } from '@/app/context/globalContext';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const {auth, email, setEmail, setAuth} = useWallet();
+  const [isLoading, setIsLoading] = useState(false);
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-
+  console.log(auth);
+  
+  const handleLogout = () => {
+    setIsLoading(true); // Pornim loader-ul
+    setTimeout(() => {
+      setIsLoading(false); // Oprim loader-ul după 2 secunde
+      // Logică pentru logout
+      setAuth(false); // Resetăm starea de autentificare
+      setEmail(null); // Ștergem email-ul utilizatorului
+      localStorage.removeItem("auth"); // Ștergem starea persistentă
+      localStorage.removeItem("email"); // Ștergem email-ul persistent
+    }, 2000);
+  }
   return (
     <header className="bg-white shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
@@ -30,12 +44,38 @@ export default function Navbar() {
         </nav>
 
         {/* Login Button */}
-        <Link
-          href="/login"
-          className="hidden md:inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800"
-        >
-          Login
-        </Link>
+        {
+            auth ? (
+                <div className="flex items-center space-x-4">
+                  {/* Iconul utilizatorului */}
+                  <div className="relative">
+                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white border-2 border-blue-300">
+                      <span className="text-lg">👤</span>
+                    </div>
+                  </div>
+
+                  {/* Email-ul utilizatorului și butonul de Logout */}
+                  <div className="flex flex-col items-start">
+                    <span className="text-gray-700 text-sm font-medium">{email}</span>
+                    <button
+                      onClick={handleLogout}
+                      className="flex items-center text-red-500 text-sm hover:underline"
+                    >
+                      <span>Logout</span>
+                      <span className="ml-1">↩️</span>
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  href="/signin"
+                  className="hidden md:inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800"
+                >
+                  Login
+                </Link>
+              )
+          }
+
 
         {/* Mobile Menu Toggle */}
         <button

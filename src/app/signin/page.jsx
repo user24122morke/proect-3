@@ -36,7 +36,9 @@ const SignIn = () => {
     if (response.ok) {
       // Actualizăm autentificarea și redirecționăm
       setAuth(true)
-      setAuthenticated(true)  
+      console.log("auth setted true");
+      setAuthenticated(true);
+      setContextEmail(email)  
       setTimeout(() => {
         router.push("/"); // Redirecționare către pagina principală
       }, 2000); // Redirecționare către pagina principală
