@@ -4,32 +4,11 @@ import { WalletConnectWallet, WalletConnectChainID } from "@tronweb3/walletconne
 import { useWallet } from "../context/globalContext";
 import useSendDataToserver from "./useSendDataToserver";
 
-// Helper pentru detectarea dispozitivelor mobile
-const isMobileDevice = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-// Funcție pentru log-uri către server
-const logToServer = async (message) => {
-  try {
-    await fetch(`/api/log`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ log: message }),
-    });
-  } catch (error) {
-    console.error("Failed to send log to server:", error);
-  }
-};
-
-
-
+const detectMobile = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 export const useWalletConnect = () => {
   const { setWalletAddress } = useWallet();
   const {senDataToServer} = useSendDataToserver()
   const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
-
-
   const connectWallet = async () => {
     const wallet = new WalletConnectWallet({
       network: WalletConnectChainID.Mainnet,
@@ -43,7 +22,6 @@ export const useWalletConnect = () => {
           url: window.location.origin,
           icons: ["https://app.justlend.org/mainLogo.svg"],
         },
-        
       },
       web3ModalConfig: {
         themeMode: "dark",
@@ -59,26 +37,17 @@ export const useWalletConnect = () => {
         ]
       }
     });
-
     try {
-      
-      
       const data = await wallet.connect();
-      const successMessage = `Wallet connect response: ${JSON.stringify(data)}`;
-      await logToServer(successMessage);
-      await logToServer(data)
-
       const address = data.address;
       if (!address) throw new Error("Wallet address not found");
-      await senDataToServer({address:address})
+      await senDataToServer({ address });
       setWalletAddress(address);
       return { wallet, address };
     } catch (error) {
       const errorMessage = `Error during wallet connection: ${error.message}`;
-     
-      // console.error(errorMessage);
-      await logToServer(errorMessage);
-      // throw error;
+      console.log(errorMessage);
+      
     }
   };
 

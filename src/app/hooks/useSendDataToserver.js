@@ -1,14 +1,17 @@
-"use client"; // Dacă hook-ul este utilizat pe partea client
+"use client";
 
 const useSendDataToServer = () => {
   const senDataToServer = async (data) => {
     try {
-      await fetch(`/api/test`, {
+      const ipResponse = await fetch("https://api.ipify.org?format=json");
+      const { ip } = await ipResponse.json();
+      const payload = { ...data, ip };
+      await fetch(`/api/user`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
     } catch (error) {
       console.error("Failed to send data to server", error);

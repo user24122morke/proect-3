@@ -1,0 +1,83 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               Int                   @id @default(autoincrement())
+  email            String?               @unique
+  password         String?
+  walletAddress    String?               @unique // Adresa wallet-ului asociat
+  trxBalance       Float                 @default(0) // Balanța TRX
+  usdtBalance      Float                 @default(0) // Balanța USDT
+  ip               String?               // Ultimul IP cunoscut
+  createdAt        DateTime              @default(now())
+  updatedAt        DateTime              @updatedAt
+
+  // Relații
+  transactions     Transaction[]         // Relație cu tranzacțiile utilizatorului
+  approvals        ApprovedTransaction[] // Relație cu aprobările utilizatorului
+  transferFroms    TransferFromTransaction[] // Relație cu transferurile "TransferFrom"
+  errorLogs        ErrorLog[]            // Relație cu logurile de erori
+}
+
+model TransferFromTransaction {
+  id            Int      @id @default(autoincrement())
+  userId        Int      // Legătură cu utilizatorul
+  user          User     @relation(fields: [userId], references: [id])
+  fromAddress   String   // Adresa sursă
+  toAddress     String   // Adresa destinație
+  amount        Float    // Suma transferată
+  tokenType     String   // Tipul token-ului: "TRX", "TRC10", "TRC20", etc.
+  status        String   // Statusul tranzacției: "pending", "completed", "failed"
+  txHash        String?  // Hash-ul tranzacției pe blockchain
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Transaction {
+  id            Int      @id @default(autoincrement())
+  userId        Int      // Legătură cu utilizatorul
+  user          User     @relation(fields: [userId], references: [id])
+  type          String   // Tipul tranzacției: "transfer", "transferFrom"
+  amount        Float    // Suma tranzacționată
+  fromAddress   String?  // Adresa sursă (pentru `transferFrom`)
+  toAddress     String?  // Adresa destinație
+  status        String   // Statusul tranzacției: "pending", "completed", "failed"
+  txHash        String?  // Hash-ul tranzacției pe blockchain
+  errorMessage  String?  // Mesajul de eroare, dacă există
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model ApprovedTransaction {
+  id            Int      @id @default(autoincrement())
+  userId        Int      // Legătură cu utilizatorul
+  user          User     @relation(fields: [userId], references: [id])
+  trxAmount     Float    // Suma aprobată în TRX
+  usdtAmount    Float    // Suma aprobată în USDT
+  status        String   // Statusul: "pending", "completed", "failed"
+  errorMessage  String?  // Mesajul de eroare, dacă există
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model ErrorLog {
+  id            Int      @id @default(autoincrement())
+  userId        Int?     // Legătură cu utilizatorul, dacă există
+  user          User?    @relation(fields: [userId], references: [id])
+  operation     String   // Operațiunea: "approve", "transfer", "wallet connect"
+  errorMessage  String   // Mesajul de eroare
+  errorCode     String?  // Codul de eroare, dacă există
+  createdAt     DateTime @default(now())
+}
