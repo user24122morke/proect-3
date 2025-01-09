@@ -16,7 +16,8 @@ export const WalletProvider = ({ children }) => {
   }); // Balanțe
   const [network, setNetwork] = useState("TRC20"); // Rețeaua activă (TRC20/ERC20)
   const [currentStep, setCurrentStep] = useState(1); // Inițializăm cu Step 
-
+  const [auth, setAuth] = useState(false); // Adaugă starea de autentificat
+  const [email, setEmail] = useState("");
   useEffect(() => {
     // Accesăm localStorage doar pe client
     const savedStep = parseInt(localStorage.getItem("currentStep")) || 1;
@@ -39,6 +40,10 @@ export const WalletProvider = ({ children }) => {
         setNetwork,
         currentStep,
         updateStep,
+        auth,
+        setAuth,
+        email,
+        setEmail
       }}
     >
       {children}
