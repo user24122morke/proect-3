@@ -1,6 +1,6 @@
 export default function AssuranceCard() {
     return (
-      <div className="bg-gray-100  rounded-lg shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-center md:items-start m-auto">
+      <div id="pricing"  className="bg-gray-100  rounded-lg shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-center md:items-start m-auto">
         {/* Text Section */}
         <div className="bg-white w-auto md:w-[100rem] block md:flex m-auto p-12 justify-between items-center">
         <div className="flex flex-col gap-7 h-auto align-middle">

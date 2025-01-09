@@ -35,18 +35,24 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="/products" className="text-gray-700 hover:text-blue-500">Products</Link>
-          <Link href="/pricing" className="text-gray-700 hover:text-blue-500">Pricing</Link>
+          {/* <Link href="/products" className="text-gray-700 hover:text-blue-500">Products</Link> */}
+          <Link href="#pricing" className="text-gray-700 hover:text-blue-500">Pricing</Link>
           <Link href="/risks" className="text-gray-700 hover:text-blue-500">Risks</Link>
           <Link href="/faq" className="text-gray-700 hover:text-blue-500">FAQ</Link>
           <Link href="/blog" className="text-gray-700 hover:text-blue-500">Blog</Link>
           <Link href="/about-us" className="text-gray-700 hover:text-blue-500">About Us</Link>
         </nav>
-
+       
         {/* Login Button */}
         {
             auth ? (
                 <div className="flex items-center space-x-4">
+                   <Link
+                      href="/walletcheck"
+                      className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600"
+                    >
+                      Connect Wallet
+                  </Link>
                   {/* Iconul utilizatorului */}
                   <div className="relative">
                     <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white border-2 border-blue-300">
@@ -67,12 +73,21 @@ export default function Navbar() {
                   </div>
                 </div>
               ) : (
-                <Link
-                  href="/signin"
-                  className="hidden md:inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800"
-                >
-                  Login
-                </Link>
+                <ul className='flex gap-4'>
+                  <Link
+                      href="/walletcheck"
+                      className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600"
+                    >
+                      Connect Wallet
+                  </Link>
+                  <Link
+                    href="/signin"
+                    className="hidden md:inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800"
+                  >
+                    Login
+                  </Link>
+                </ul>
+                
               )
           }
 
@@ -92,13 +107,13 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <nav className="md:hidden bg-white border-t">
           <ul className="flex flex-col space-y-2 p-4">
-            <li>
+            {/* <li>
               <Link href="/products" className="text-gray-700 hover:text-blue-500">
                 Products
               </Link>
-            </li>
+            </li> */}
             <li>
-              <Link href="/pricing" className="text-gray-700 hover:text-blue-500">
+              <Link href="#pricing" className="text-gray-700 hover:text-blue-500">
                 Pricing
               </Link>
             </li>

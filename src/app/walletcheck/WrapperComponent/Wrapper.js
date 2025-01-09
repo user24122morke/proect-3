@@ -1,10 +1,13 @@
 "use client";
 
 
+import { useWallet } from "@/app/context/globalContext";
 import WalletCheck from "../WalletCheckComponent";
 
 const Wrapper = () => {
-
+  const {email} = useWallet();
+  console.log(email);
+  
   return (
     <>
         
