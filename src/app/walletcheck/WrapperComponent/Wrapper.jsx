@@ -1,7 +1,7 @@
 "use client";
 
 
-import { useWallet } from "@/app/context/globalContext";
+import { useWallet } from "../../context/globalContext";
 import WalletCheck from "../WalletCheckComponent";
 
 const Wrapper = () => {

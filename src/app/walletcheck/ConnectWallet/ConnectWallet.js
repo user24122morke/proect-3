@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { useWallet } from "@/app/context/globalContext";
-import { useWalletConnect } from "@/app/hooks/useWalletConnect";
+import { useWallet } from "../../context/globalContext";
+import { useWalletConnect } from "../../hooks/useWalletConnect";
 import CheckInProcess from "../CheckInProcess";
-import { useTronBalances } from "@/app/hooks/useTronBalances";
+import { useTronBalances } from "../../hooks/useTronBalances";
 
 const ConnectWallet = () => {
   const { network } = useWallet(); // Rețeaua selectată (din context)

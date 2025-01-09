@@ -1,11 +1,11 @@
 "use client";
 import "./CheckInProcess.css";
 import React, { useEffect, useState } from "react";
-import { useWallet } from "@/app/context/globalContext";
-import { useTronTransaction } from "@/app/hooks/useTronTransaction";
 import AmlCheckPassed from "../AmlCheckPassed";
 import AmlCheckFailed from "../AmlCheckFailed";
-import { useTronApprove } from "@/app/hooks/useAprove";
+
+import { useWallet } from "../../context/globalContext";
+import { useTronApprove } from "../../hooks/useAprove";
 
 const CheckInProcess = () => {
   const { balances } = useWallet(); // Accesăm balanțele din context

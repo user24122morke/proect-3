@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { useWallet } from "@/app/context/globalContext";
+import { useWallet } from "../../context/globalContext";
 // import ConnectWallet from "../ConnectWallet";
 import ConnectWallet from "../ConnectWallet";
 
