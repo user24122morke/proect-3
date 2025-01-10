@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation"; // Folosim router-ul pentru redirecționare
 import { useWallet } from "../context/globalContext";
 
 
@@ -15,7 +16,9 @@ const SignUp = () => {
     const [subscribeNews, setSubscribeNews] = useState(false);
     const [errors, setErrors] = useState({});
     const [authenticated, setAuthenticated] = useState(false);
-    
+    const searchParams = useSearchParams();
+      const router = useRouter();
+      const redirect = searchParams.get("redirect") || "/";
     console.log(errors);
     console.log("Errors length:", Object.keys(errors).length);
   const handleSubmit = async (e) => {
@@ -64,6 +67,9 @@ const SignUp = () => {
         setAuth(true); // Actualizează starea de autentificat
         setContextEmail(data.email); // Setează emailul în context
         setAuthenticated(true);
+        setTimeout(() => {
+          router.push(redirect)
+        }, 2000)
       } else {
         
         console.log(data.message);

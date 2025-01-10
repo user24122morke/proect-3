@@ -3,7 +3,7 @@ import React from 'react';
 
 const MainSection = () => {
   return (
-    <div className="bg-gray-50 min-h-screen flex flex-col items-center py-10 px-5">
+    <div className="bg-gray-50  flex flex-col items-center py-10 px-5">
       {/* Main Content Section */}
       <div className="bg-white shadow-md rounded-lg max-w-4xl w-full p-8 text-center">
         <h1 className="text-2xl font-semibold mb-4 text-gray-800">

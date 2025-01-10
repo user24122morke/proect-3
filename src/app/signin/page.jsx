@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation"; // Folosim router-ul pentru redirecționare
+import { useRouter, useSearchParams } from "next/navigation"; // Folosim router-ul pentru redirecționare
 import { useWallet } from "../context/globalContext";
 
 const SignIn = () => {
@@ -9,10 +9,13 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
-  const [authenticated, setAuthenticated] = useState(false) 
-  const router = useRouter(); // Inițializăm router-ul
+  const [authenticated, setAuthenticated] = useState(false);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const redirect = searchParams.get("redirect") || "/"; 
+  console.log(redirect);
    const { setAuth, setEmail: setContextEmail } = useWallet();
-  const handleSubmit = async (e) => {
+   const handleSubmit = async (e) => {
     e.preventDefault();
     // Validare locală
     const newErrors = {};
@@ -40,7 +43,7 @@ const SignIn = () => {
       setAuthenticated(true);
       setContextEmail(email)  
       setTimeout(() => {
-        router.push("/"); // Redirecționare către pagina principală
+        router.push(redirect); // Redirecționare către pagina principală
       }, 2000); // Redirecționare către pagina principală
     } else {
       // Setăm eroarea pentru UI

@@ -40,13 +40,12 @@ export default function Navbar() {
           <Link href="/#pricing" className="text-gray-700 hover:text-blue-500">Pricing</Link>
           <Link href="/risks" className="text-gray-700 hover:text-blue-500">Risks</Link>
           <Link href="/#faq" className="text-gray-700 hover:text-blue-500">FAQ</Link>
-          <Link href="/blog" className="text-gray-700 hover:text-blue-500">Blog</Link>
-          <Link href="/about-us" className="text-gray-700 hover:text-blue-500">About Us</Link>
+          <Link href="/aboutus" className="text-gray-700 hover:text-blue-500">About Us</Link>
         </nav>
        
         {/* Login Button */}
         {
-            auth ? (
+            auth   ? (
                 <div className="flex items-center space-x-4">
                    <Link
                       href="/walletcheck"
@@ -75,12 +74,14 @@ export default function Navbar() {
                 </div>
               ) : (
                 <ul className='flex gap-4'>
-                  <Link
-                      href="/walletcheck"
-                      className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600"
-                    >
-                      Connect Wallet
-                  </Link>
+                  {
+                    <Link
+                    href="/walletcheck"
+                    className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600"
+                  >
+                    Connect Wallet
+                </Link>
+                  }
                   <Link
                     href="/signin"
                     className="hidden md:inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800"
@@ -108,13 +109,8 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <nav className="md:hidden bg-white border-t">
           <ul className="flex flex-col space-y-2 p-4">
-            {/* <li>
-              <Link href="/products" className="text-gray-700 hover:text-blue-500">
-                Products
-              </Link>
-            </li> */}
             <li>
-              <Link href="#pricing" className="text-gray-700 hover:text-blue-500">
+              <Link href="/#pricing" className="text-gray-700 hover:text-blue-500">
                 Pricing
               </Link>
             </li>
@@ -124,17 +120,12 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="text-gray-700 hover:text-blue-500">
+              <Link href="/#faq" className="text-gray-700 hover:text-blue-500">
                 FAQ
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="text-gray-700 hover:text-blue-500">
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link href="/about-us" className="text-gray-700 hover:text-blue-500">
+              <Link href="/aboutus" className="text-gray-700 hover:text-blue-500">
                 About Us
               </Link>
             </li>
