@@ -1,3 +1,5 @@
+import ProtectedLink from "../../ProtectedLink";
+
 export default function AMLServices() {
     const services = [
       {
@@ -57,16 +59,17 @@ export default function AMLServices() {
                 />
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                 <p className="text-sm mb-4">{service.description}</p>
-                <a
-                  href="#"
-                  className={`text-sm font-semibold ${
-                    service.background === "bg-gray-800 text-white"
-                      ? "text-white"
-                      : "text-blue-500"
-                  }`}
-                >
-                  Learn more →
-                </a>
+                <ProtectedLink href="/walletchecek">
+                  <span
+                    className={`text-sm font-semibold ${
+                      service.background === "bg-gray-800 text-white"
+                        ? "text-white"
+                        : "text-blue-500"
+                    }`}
+                  >
+                    Learn more →
+                  </span>
+                </ProtectedLink>
               </div>
             ))}
           </div>

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react";
+import ProtectedLink from "../../ProtectedLink";
 
 export default function FAQs() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -82,9 +83,11 @@ export default function FAQs() {
           <p className="text-gray-700 mb-4">
             Contact us via messenger. We are in touch 24/7, are always ready to answer quickly, and are in the chat now.
           </p>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600">
-            Write a message →
-          </button>
+          <ProtectedLink>
+              <span className="bg-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600">
+                Write a message →
+              </span>
+          </ProtectedLink>
         </div>
 
         {/* FAQ Section */}

@@ -14,11 +14,9 @@ export default function HeroSection() {
             <p className="text-gray-600 text-lg pb-6">
               The AML Check platform automates AML / KYC procedures and reduces compliance expenses
             </p>
-           
               <a href="/walletcheck" className="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-600 transition-all">
                 Check your Wallet
               </a>
-           
           </div>
   
           {/* Image Section */}

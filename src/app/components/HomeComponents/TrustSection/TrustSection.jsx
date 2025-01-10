@@ -1,3 +1,5 @@
+import ProtectedLink from "../../ProtectedLink";
+
 export default function TrustSection() {
     return (
       <section className="bg-gray-50 py-12 px-6">
@@ -58,9 +60,9 @@ export default function TrustSection() {
             </div>
             <p className="text-sm text-gray-600">
               Based on{" "}
-              <a href="#" className="text-blue-500 hover:underline">
+              <ProtectedLink href='/walletcheck'>
                 66 reviews
-              </a>
+              </ProtectedLink>
             </p>
           </div>
   

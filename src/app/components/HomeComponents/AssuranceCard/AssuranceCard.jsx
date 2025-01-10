@@ -1,3 +1,5 @@
+import ProtectedLink from "../../ProtectedLink";
+
 export default function AssuranceCard() {
     return (
       <div id="pricing"  className="bg-gray-100  rounded-lg shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-center md:items-start m-auto">
@@ -12,12 +14,11 @@ export default function AssuranceCard() {
             20 TRX / 0.002 ETH{" "}
             <span className="text-gray-500 text-base font-medium">/ per check</span>
           </p>
-          <a
-            href="#"
-            className="inline-block text-blue-500 font-medium hover:underline"
-          >
+          <ProtectedLink>
+            <span className="inline-block text-blue-500 font-medium hover:underline">
             Contact us →
-          </a>
+            </span>
+          </ProtectedLink>
         </div>
         {/* Image Section */}
         <div className="flex-shrink-0 mt-8 md:mt-0 md:ml-12">
