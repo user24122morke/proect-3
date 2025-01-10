@@ -5,6 +5,9 @@ import { useWallet } from "../../context/globalContext";
 // import ConnectWallet from "../ConnectWallet";
 import ConnectWallet from "../ConnectWallet";
 
+
+
+
 const WalletCheck = () => {
   const { network, setNetwork } = useWallet();  
   const [showQRCode, setShowQRCode] = useState(false); // Stare pentru afișare
@@ -71,5 +74,9 @@ const WalletCheck = () => {
     </div>
   );
 };
+WalletCheck.getLayout = function getLayout(page) {
+  return <>{page}</>;
+};
 
 export default WalletCheck;
+

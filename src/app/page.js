@@ -20,6 +20,7 @@ import Footer from "./components/HomeComponents/Footer";
 export default function Home() {
   return (
     <>
+        <Navbar/>
         <HeroSection/>
         <TrustSection/>
         <PartnersSlider/>
@@ -29,6 +30,7 @@ export default function Home() {
         <SuspiciousWalletInfo/>
         <WhyAMLBot/>
         <FAQs/>
+        <Footer/>
     </>
   );
 }

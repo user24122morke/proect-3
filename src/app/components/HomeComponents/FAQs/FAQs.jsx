@@ -74,7 +74,7 @@ export default function FAQs() {
   
 
   return (
-    <div className="bg-gray-100 py-12 px-7">
+    <div id="faq" className="bg-gray-100 py-12 px-7">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Chat Section */}
         <div className="bg-blue-100 p-6 h-max rounded-lg shadow-md">

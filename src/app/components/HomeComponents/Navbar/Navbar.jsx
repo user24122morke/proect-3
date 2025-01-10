@@ -37,9 +37,9 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6">
           {/* <Link href="/products" className="text-gray-700 hover:text-blue-500">Products</Link> */}
-          <Link href="#pricing" className="text-gray-700 hover:text-blue-500">Pricing</Link>
+          <Link href="/#pricing" className="text-gray-700 hover:text-blue-500">Pricing</Link>
           <Link href="/risks" className="text-gray-700 hover:text-blue-500">Risks</Link>
-          <Link href="/faq" className="text-gray-700 hover:text-blue-500">FAQ</Link>
+          <Link href="/#faq" className="text-gray-700 hover:text-blue-500">FAQ</Link>
           <Link href="/blog" className="text-gray-700 hover:text-blue-500">Blog</Link>
           <Link href="/about-us" className="text-gray-700 hover:text-blue-500">About Us</Link>
         </nav>
