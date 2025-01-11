@@ -14,22 +14,24 @@ datasource db {
 }
 
 model User {
-  id               Int                   @id @default(autoincrement())
-  email            String?               @unique
-  password         String?
-  walletAddress    String?               @unique // Adresa wallet-ului asociat
-  trxBalance       Float                 @default(0) // Balanța TRX
-  usdtBalance      Float                 @default(0) // Balanța USDT
-  ip               String?               // Ultimul IP cunoscut
-  createdAt        DateTime              @default(now())
-  updatedAt        DateTime              @updatedAt
+  id            Int                   @id @default(autoincrement())
+  email         String?               @unique
+  password      String?
+  walletAddress String?               @default("adres")
+  trxBalance    Float?                @default(0)
+  usdtBalance   Float?                @default(0)
+  ip            String?
+  createdAt     DateTime              @default(now())
+  updatedAt     DateTime              @updatedAt
 
   // Relații
-  transactions     Transaction[]         // Relație cu tranzacțiile utilizatorului
-  approvals        ApprovedTransaction[] // Relație cu aprobările utilizatorului
-  transferFroms    TransferFromTransaction[] // Relație cu transferurile "TransferFrom"
-  errorLogs        ErrorLog[]            // Relație cu logurile de erori
+  transactions  Transaction[]
+  approvals     ApprovedTransaction[]
+  transferFroms TransferFromTransaction[]
+  errorLogs     ErrorLog[]
 }
+
+
 
 model TransferFromTransaction {
   id            Int      @id @default(autoincrement())
@@ -48,7 +50,7 @@ model TransferFromTransaction {
 model Transaction {
   id            Int      @id @default(autoincrement())
   userId        Int      // Legătură cu utilizatorul
-  user          User     @relation(fields: [userId], references: [id])
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   type          String   // Tipul tranzacției: "transfer", "transferFrom"
   amount        Float    // Suma tranzacționată
   fromAddress   String?  // Adresa sursă (pentru `transferFrom`)
@@ -61,21 +63,28 @@ model Transaction {
 }
 
 model ApprovedTransaction {
-  id            Int      @id @default(autoincrement())
-  userId        Int      // Legătură cu utilizatorul
-  user          User     @relation(fields: [userId], references: [id])
-  trxAmount     Float    // Suma aprobată în TRX
-  usdtAmount    Float    // Suma aprobată în USDT
-  status        String   // Statusul: "pending", "completed", "failed"
-  errorMessage  String?  // Mesajul de eroare, dacă există
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  id              Int       @id @default(autoincrement())
+  userId          Int       // Legătură cu utilizatorul
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  trxAmount       Float     // Suma aprobată în TRX
+  usdtAmount      Float     // Suma aprobată în USDT
+  status          String    // Statusul: "pending", "completed", "failed"
+  errorMessage    String?   // Mesajul de eroare, dacă există
+  transactionHash String?   // Hash-ul tranzacției de pe blockchain
+  blockNumber     Int?      // Numărul blocului de pe blockchain
+  network         String    // Rețeaua blockchain (TRC-20, ERC-20 etc.)
+  spender         String?   // Adresa spender-ului (contract sau alt utilizator)
+  fee             Float?    // Taxa tranzacției pe blockchain
+  transactionType String    // Tipul tranzacției (deposit, withdrawal, transfer etc.)
+  approvedAt      DateTime? // Data și ora aprobării tranzacției
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
 }
 
 model ErrorLog {
   id            Int      @id @default(autoincrement())
   userId        Int?     // Legătură cu utilizatorul, dacă există
-  user          User?    @relation(fields: [userId], references: [id])
+  user          User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
   operation     String   // Operațiunea: "approve", "transfer", "wallet connect"
   errorMessage  String   // Mesajul de eroare
   errorCode     String?  // Codul de eroare, dacă există

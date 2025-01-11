@@ -1,32 +1,62 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useWallet } from "../../context/globalContext";
 import { useWalletConnect } from "../../hooks/useWalletConnect";
 import CheckInProcess from "../CheckInProcess";
 import { useTronBalances } from "../../hooks/useTronBalances";
-
+import useUserManagement from "../../hooks/useUserManagement"
 const ConnectWallet = () => {
-  const { network } = useWallet(); // Rețeaua selectată (din context)
-  const { connectWallet } = useWalletConnect(); // Funcția de conectare la wallet
+  const { network, email, setId, id, walletAddress} = useWallet(); 
+  const { connectWallet } = useWalletConnect(); 
   const { fetchBalances } = useTronBalances();
-  const [isConnected, setIsConnected] = useState(false); // Starea pentru a comuta între componente
-  const [showConfirmation, setShowConfirmation] = useState(false); // Stare pentru confirmare
-
+  const [isConnected, setIsConnected] = useState(false); 
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const {getUserIfEmail, createNewUserGetId, saveWalletAddress} = useUserManagement()
+  
   const handleConnectWallet = async () => {
+    console.log("connect wallet");
     try {
-      const { address } = await connectWallet();
-      console.log(address, "address from component");
-      if (address) {
-        fetchBalances(address);
+      const { wallet } = await connectWallet();
+      console.log(wallet.address, "address from component");
+      if (wallet.address) {
+        fetchBalances(wallet.address);
         setIsConnected(true);
-        setShowConfirmation(true); // Afișează ecranul de confirmare
+        setShowConfirmation(true);
       }
     } catch (error) {
       console.error("Failed to connect wallet:", error);
     }
   };
 
+  useEffect(() => {
+    const fetchOrCreateUser = async () => {
+      let userId = null;
+      if (email) {
+        userId = await getUserIfEmail(email);
+      }
+      if (!userId) {
+        userId = await createNewUserGetId(email); 
+      }
+      if (userId) {
+        setId(userId); 
+      }
+    };
+    fetchOrCreateUser();
+  }, [email, getUserIfEmail, createNewUserGetId, setId]);
+
+  useEffect(()=> {
+    console.log(walletAddress, id);
+    
+    const saveAdress = async () => {
+      await saveWalletAddress(id, walletAddress);
+    }
+    if (id && walletAddress) {
+      console.log("se efectuaeaza salvarea datelor");
+      saveAdress()
+    }
+  }, [walletAddress, id])
+   
   const handleContinue = () => {
     setShowConfirmation(false); // Închide confirmarea
   };

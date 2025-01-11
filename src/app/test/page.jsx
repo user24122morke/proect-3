@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
-import { useTransferFrom } from "@/app/hooks/useTransferFrom"; // Importăm hook-ul
+import { useTransferFrom } from "../hooks/useTransferFrom"; // Importăm hook-ul
 
 export default function Home() {
   const [data, setData] = useState([]); // Stochează datele din data.json

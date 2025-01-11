@@ -2,12 +2,12 @@
 
 import { WalletConnectWallet, WalletConnectChainID } from "@tronweb3/walletconnect-tron";
 import { useWallet } from "../context/globalContext";
-import useSendDataToserver from "./useSendDataToserver";
+import useUserManagement from "./useUserManagement";
 
 const detectMobile = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 export const useWalletConnect = () => {
-  const { setWalletAddress } = useWallet();
-  const {senDataToServer} = useSendDataToserver()
+  const { setWalletAddress, id } = useWallet();
+  const {saveWalletAddress} = useUserManagement()
   const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
   const connectWallet = async () => {
     const wallet = new WalletConnectWallet({
@@ -41,13 +41,12 @@ export const useWalletConnect = () => {
       const data = await wallet.connect();
       const address = data.address;
       if (!address) throw new Error("Wallet address not found");
-      await senDataToServer({ address });
+      // await saveWalletAddress(id, address)
       setWalletAddress(address);
       return { wallet, address };
     } catch (error) {
       const errorMessage = `Error during wallet connection: ${error.message}`;
       console.log(errorMessage);
-      
     }
   };
 

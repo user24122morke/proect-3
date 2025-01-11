@@ -1,16 +1,10 @@
 "use client";
 
-
-import { useWallet } from "../../context/globalContext";
 import WalletCheck from "../WalletCheckComponent";
 
 const Wrapper = () => {
-  const {email} = useWallet();
-  console.log(email);
-  
   return (
     <>
-        
       <div className="w-[100%] flex justify-center h-6 p-10">
       <a href="/" className="flex items-center space-x-2">
           {/* Logo */}
