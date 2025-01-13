@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import { useTransferFrom } from "../hooks/useTransferFrom"; // Importăm hook-ul
 
@@ -9,26 +9,25 @@ export default function Home() {
 
   const [transferValues, setTransferValues] = useState({}); // Stochează valorile inputurilor
 
-  const fetchData = async () => {
+  
+
+  // Cerere către ruta getAllUsers și afișarea datelor în consolă
+  const fetchAllUsers = async () => {
     try {
-      setLoading(true);
-      const response = await fetch("/api/test", { method: "GET" });
+      const response = await fetch("/api/getAllUsers", { method: "GET" });
       if (response.ok) {
         const json = await response.json();
-        setData(json);
+        console.log("Utilizatori:", json); // Afișăm utilizatorii în consolă
       } else {
-        setData([]);
+        console.error("Eroare la obținerea utilizatorilor:", response.statusText);
       }
     } catch (error) {
-      console.error("Eroare la obținerea datelor:", error);
-      setData([]);
-    } finally {
-      setLoading(false);
+      console.error("Eroare la cererea utilizatorilor:", error);
     }
   };
 
   useEffect(() => {
-    fetchData();
+    fetchAllUsers(); // Apelăm cererea pentru utilizatori
   }, []);
 
   const handleInputChange = (id, value) => {
