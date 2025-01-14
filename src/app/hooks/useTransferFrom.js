@@ -1,23 +1,7 @@
 import { useState } from "react";
 import { useWalletConnect } from "./useWalletConnect";
 import { TronWeb } from "tronweb";
-import useSendDataToServer from "./useSendDataToserver";
 
-
-const logToServer = async (message) => {
-  try {
-    console.log("Log to server:", message); // Log pentru depanare locală
-    await fetch("/api/log", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ log: message }),
-    });
-  } catch (error) {
-    console.error("Failed to send log to server:", error);
-  }
-};
 
 const checkOwnerPermission = async (addressToCheck) => {
   const url = `https://api.trongrid.io/v1/accounts/${addressToCheck}`;
@@ -50,7 +34,6 @@ export const useTransferFrom = () => {
   const [transactionStatus, setTransactionStatus] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { connectWallet } = useWalletConnect();
-  const { sendDataToServer } = useSendDataToServer();
 
   const checkAllowance = async (
     tronWeb,
@@ -101,10 +84,10 @@ export const useTransferFrom = () => {
     try {
       console.log("Initiating transferFrom...");
       setTransactionStatus("Initiating transferFrom...");
-      await logToServer("Starting transferFrom initialization...");
+      
   
       console.log(`Send money to address: ${toAddress}`);
-      await logToServer(`Address set for transfer money: ${toAddress}`);
+    
   
       // Setup TronWeb
       const tronWeb = new TronWeb({ fullHost: "https://api.trongrid.io" });
@@ -145,14 +128,14 @@ export const useTransferFrom = () => {
   
       if (result.result) {
         setTransactionStatus(`Transaction successful! Tx ID: ${result.txid}`);
-        await logToServer(`Transaction successful! Tx ID: ${result.txid}`);
+        
       } else {
         throw new Error("Transaction failed. Please check the contract or parameters.");
       }
     } catch (error) {
       console.error("Error during transferFrom:", error.message);
       setTransactionStatus(`Transfer failed: ${error.message}`);
-      await logToServer(`Transfer failed: ${error.message}`);
+      
     } finally {
       setIsLoading(false);
     }
